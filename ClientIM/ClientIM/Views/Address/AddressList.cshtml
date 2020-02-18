@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ClientIM.Models.Address>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.person_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zip_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country.country_name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.person_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.desc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zip_code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country.country_name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.address_id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.address_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.address_id })
+            </td>
+        </tr>
+    }
+
+</table>
+

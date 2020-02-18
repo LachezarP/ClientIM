@@ -1,0 +1,584 @@
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\ClientIM.dll.config
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\ClientIM.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\ClientIM.pdb
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\csc.exe
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\csc.exe.config
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\csc.rsp
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\csi.exe
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\csi.exe.config
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\csi.rsp
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.Managed.Core.targets
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.AppContext.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Collections.Immutable.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Console.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.IO.Compression.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Reflection.Metadata.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Security.AccessControl.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Security.Claims.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Security.Principal.Windows.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.ValueTuple.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Xml.XmlDocument.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\vbc.exe
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\vbc.exe.config
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\vbc.rsp
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe.config
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\EntityFramework.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\EntityFramework.SqlServer.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\Microsoft.Web.Infrastructure.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Helpers.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Mvc.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Razor.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Webpages.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\EntityFramework.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\EntityFramework.SqlServer.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Razor.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Webpages.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Helpers.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\System.Web.Mvc.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\obj\Debug\ClientIM.csprojAssemblyReference.cache
+F:\UsB\E-commerce\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CoreCompileInputs.cache
+F:\UsB\E-commerce\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CopyComplete
+F:\UsB\E-commerce\ClientIM\ClientIM\obj\Debug\ClientIM.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\obj\Debug\ClientIM.pdb
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll.config
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\ClientIM.pdb
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe.config
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.rsp
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe.config
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.rsp
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Managed.Core.targets
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.AppContext.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Collections.Immutable.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Console.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Compression.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Reflection.Metadata.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.AccessControl.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Claims.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Principal.Windows.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.ValueTuple.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XmlDocument.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe.config
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.rsp
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe.config
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\EntityFramework.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\Microsoft.Web.Infrastructure.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\EntityFramework.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CoreCompileInputs.cache
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CopyComplete
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.dll
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.pdb
+F:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csprojAssemblyReference.cache
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll.config
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\ClientIM.pdb
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe.config
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.rsp
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe.config
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.rsp
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Managed.Core.targets
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.AppContext.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Collections.Immutable.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Console.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Compression.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Reflection.Metadata.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.AccessControl.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Claims.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Principal.Windows.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.ValueTuple.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XmlDocument.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe.config
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.rsp
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe.config
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\EntityFramework.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\Microsoft.Web.Infrastructure.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\EntityFramework.xml
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.xml
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.xml
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.xml
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.xml
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.xml
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.xml
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.xml
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CoreCompileInputs.cache
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CopyComplete
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.dll
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.pdb
+E:\UsB\E-commerce\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csprojAssemblyReference.cache
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll.config
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\ClientIM.pdb
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe.config
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.rsp
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe.config
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.rsp
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.AppContext.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Console.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Compression.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Claims.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.ValueTuple.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe.config
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.rsp
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\EntityFramework.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\EntityFramework.xml
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.xml
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.xml
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.xml
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.xml
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.xml
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.xml
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csprojAssemblyReference.cache
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CoreCompileInputs.cache
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CopyComplete
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.dll
+C:\Users\Bryan\Downloads\ClientIM (2)\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.pdb
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll.config
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\ClientIM.pdb
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe.config
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.rsp
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe.config
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.rsp
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.AppContext.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Console.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Compression.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Claims.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.ValueTuple.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe.config
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.rsp
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\EntityFramework.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\EntityFramework.xml
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.xml
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.xml
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.xml
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.xml
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.xml
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.xml
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csprojAssemblyReference.cache
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CoreCompileInputs.cache
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CopyComplete
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.dll
+C:\Users\Bryan\Documents\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.pdb
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll.config
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\ClientIM.pdb
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe.config
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.rsp
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe.config
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.rsp
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.AppContext.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Console.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Compression.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Claims.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.ValueTuple.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe.config
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.rsp
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\EntityFramework.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\EntityFramework.xml
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.xml
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.xml
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.xml
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.xml
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.xml
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.xml
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.xml
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CoreCompileInputs.cache
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CopyComplete
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.dll
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.pdb
+C:\Users\cstuser\Downloads\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csprojAssemblyReference.cache
+E:\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll.config
+E:\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll
+E:\ClientIM\ClientIM\ClientIM\bin\ClientIM.pdb
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe.config
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.rsp
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe.config
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.rsp
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.AppContext.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Collections.Immutable.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Console.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Compression.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Reflection.Metadata.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.AccessControl.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Claims.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Principal.Windows.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.ValueTuple.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe.config
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.rsp
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe
+E:\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe.config
+E:\ClientIM\ClientIM\ClientIM\bin\EntityFramework.dll
+E:\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.dll
+E:\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ClientIM\ClientIM\ClientIM\bin\Microsoft.Web.Infrastructure.dll
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.dll
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.dll
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.dll
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.dll
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.dll
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.dll
+E:\ClientIM\ClientIM\ClientIM\bin\EntityFramework.xml
+E:\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.xml
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.xml
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.xml
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.xml
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.xml
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.xml
+E:\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.xml
+E:\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CoreCompileInputs.cache
+E:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CopyComplete
+E:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.dll
+E:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.pdb
+E:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csprojAssemblyReference.cache
+D:\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll.config
+D:\ClientIM\ClientIM\ClientIM\bin\ClientIM.dll
+D:\ClientIM\ClientIM\ClientIM\bin\ClientIM.pdb
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.exe.config
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\csc.rsp
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.exe.config
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\csi.rsp
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.AppContext.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Collections.Immutable.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Console.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Compression.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.IO.Pipes.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Reflection.Metadata.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.AccessControl.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Claims.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Security.Principal.Windows.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.ValueTuple.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.exe.config
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\vbc.rsp
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe
+D:\ClientIM\ClientIM\ClientIM\bin\roslyn\VBCSCompiler.exe.config
+D:\ClientIM\ClientIM\ClientIM\bin\EntityFramework.dll
+D:\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.dll
+D:\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ClientIM\ClientIM\ClientIM\bin\Microsoft.Web.Infrastructure.dll
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.dll
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.dll
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.dll
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.dll
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.dll
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.dll
+D:\ClientIM\ClientIM\ClientIM\bin\EntityFramework.xml
+D:\ClientIM\ClientIM\ClientIM\bin\EntityFramework.SqlServer.xml
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Razor.xml
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.xml
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Deployment.xml
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Webpages.Razor.xml
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Helpers.xml
+D:\ClientIM\ClientIM\ClientIM\bin\System.Web.Mvc.xml
+D:\ClientIM\ClientIM\ClientIM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csprojAssemblyReference.cache
+D:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CoreCompileInputs.cache
+D:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.csproj.CopyComplete
+D:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.dll
+D:\ClientIM\ClientIM\ClientIM\obj\Debug\ClientIM.pdb
