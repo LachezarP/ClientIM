@@ -1,0 +1,77 @@
+﻿@model ClientIM.Models.Address
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>
+        @Html.DisplayFor(model => Model.Profile.first_name)
+        @Html.DisplayFor(model => Model.Profile.last_name)
+    </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.person_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.person_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.state)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zip_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zip_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country.country_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country.country_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.address_id }) |
+    @Html.ActionLink("Back to List", "Index", new { id = Model.person_id })
+</p>

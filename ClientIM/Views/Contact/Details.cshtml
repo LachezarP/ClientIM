@@ -1,0 +1,45 @@
+﻿@model ClientIM.Models.Contact
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>
+        @Html.DisplayFor(model => Model.Profile.first_name)
+        @Html.DisplayFor(model => Model.Profile.last_name)
+    </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.type_info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type_info)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.info)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.first_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profile.first_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = ViewBag.id }) |
+    @Html.ActionLink("Back to List", "Index", new { id = Model.person_id })
+</p>
