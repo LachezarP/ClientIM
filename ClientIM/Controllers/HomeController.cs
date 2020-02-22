@@ -21,7 +21,8 @@ namespace ClientIM.Controllers
         {
             string username = collection["username"];
             Models.User theUser = db.Users.SingleOrDefault(u => u.username.Equals(username));
-            if (theUser != null) {
+            if (theUser != null && 
+                Crypto.VerifyHashedPassword(theUser.password_hash, collection["password_hash"])) {
 
             }
 
