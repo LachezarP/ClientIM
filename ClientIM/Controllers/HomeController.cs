@@ -1,5 +1,7 @@
-﻿using System;
+﻿using QRCoder;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.Helpers;
@@ -22,11 +24,16 @@ namespace ClientIM.Controllers
             string username = collection["username"];
             Models.User theUser = db.Users.SingleOrDefault(u => u.username.Equals(username));
             if (theUser != null && 
-                Crypto.VerifyHashedPassword(theUser.password_hash, collection["password_hash"])) {
-
+                Crypto.VerifyHashedPassword(theUser.password_hash, collection["password_hash"]))
+            {
+                Session["person_id"] = theUser.user_id;
+                return RedirectToAction("Index", "Profile");
             }
-
-            return View();
+            else
+            {
+                ViewBag.error = "Wrong Username/Password combination!";
+                return View();
+            }
         }
 
         // GET: Home/Details/5
@@ -36,9 +43,19 @@ namespace ClientIM.Controllers
             return RedirectToAction("Index");
         }
 
+        private static Random random = new Random();
+        public static string RandomBase32String(int lenght)
+        {
+            const string chars = "ACBCDEFGHIJKLMNOPQRSTUVWXYZ234567";
+            return new string(Enumerable.Repeat(chars, lenght)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
         // GET: Home/Create
         public ActionResult Register()
         {
+            
+
             return View();
         }
 

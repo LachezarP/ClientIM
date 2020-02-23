@@ -57,6 +57,5 @@ namespace ClientIM.Models
         public virtual ICollection<FriendLink> FriendLinks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FriendLink> FriendLinks1 { get; set; }
-        public virtual User User { get; set; }
     }
 }

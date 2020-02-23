@@ -14,11 +14,9 @@ namespace ClientIM.Models
     
     public partial class User
     {
-        public int person_id { get; set; }
+        public int user_id { get; set; }
         public string username { get; set; }
         public string password_hash { get; set; }
         public string secret { get; set; }
-    
-        public virtual Profile Profile { get; set; }
     }
 }
