@@ -27,6 +27,7 @@ namespace ClientIM.Models
             this.Likes = new HashSet<Like>();
             this.FriendLinks = new HashSet<FriendLink>();
             this.FriendLinks1 = new HashSet<FriendLink>();
+            this.Users = new HashSet<User>();
         }
     
         public int person_id { get; set; }
@@ -57,5 +58,7 @@ namespace ClientIM.Models
         public virtual ICollection<FriendLink> FriendLinks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FriendLink> FriendLinks1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

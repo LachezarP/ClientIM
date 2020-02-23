@@ -132,8 +132,9 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           </Key>
           <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="password_hash" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password_hash" Type="nvarchar" MaxLength="72" Nullable="false" />
           <Property Name="secret" Type="nvarchar" MaxLength="16" />
+          <Property Name="person_id" Type="int" />
         </EntityType>
         <Association Name="FK_Address_Country">
           <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
@@ -279,6 +280,18 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_User_Profile">
+          <End Role="Profile" Type="Self.Profile" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="ClientModelStoreContainer">
           <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
@@ -361,6 +374,10 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           <AssociationSet Name="FK_Sender_Profile" Association="Self.FK_Sender_Profile">
             <End Role="Profile" EntitySet="Profile" />
             <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Profile" Association="Self.FK_User_Profile">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -462,6 +479,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           <NavigationProperty Name="Likes" Relationship="Self.FK_Like_Profile" FromRole="Profile" ToRole="Like" />
           <NavigationProperty Name="FriendLinks" Relationship="Self.FK_Requested_Profile" FromRole="Profile" ToRole="FriendLink" />
           <NavigationProperty Name="FriendLinks1" Relationship="Self.FK_Requester_Profile" FromRole="Profile" ToRole="FriendLink" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_User_Profile" FromRole="Profile" ToRole="User" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -471,6 +489,8 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="password_hash" Type="String" MaxLength="72" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="secret" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="person_id" Type="Int32" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK_User_Profile" FromRole="User" ToRole="Profile" />
         </EntityType>
         <EntityType Name="Comment_like">
           <Key>
@@ -660,6 +680,18 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_User_Profile">
+          <End Role="Profile" Type="Self.Profile" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="ClientEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Addresses" EntityType="Self.Address" />
           <EntitySet Name="Comments" EntityType="Self.Comment" />
@@ -719,6 +751,10 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           <AssociationSet Name="FK_Requester_Profile" Association="Self.FK_Requester_Profile">
             <End Role="Profile" EntitySet="Profiles" />
             <End Role="FriendLink" EntitySet="FriendLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Profile" Association="Self.FK_User_Profile">
+            <End Role="Profile" EntitySet="Profiles" />
+            <End Role="User" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -816,6 +852,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="password_hash" ColumnName="password_hash" />
                 <ScalarProperty Name="secret" ColumnName="secret" />
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

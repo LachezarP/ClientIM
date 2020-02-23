@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClientIM.ActionFilter;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Web.Mvc;
 
 namespace ClientIM.Controllers
 {
+    [LoginFilter]
     public class PictureController : Controller
     {
         Models.ClientEntities db = new Models.ClientEntities();

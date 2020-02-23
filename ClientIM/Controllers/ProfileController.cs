@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
+using ClientIM.ActionFilter;
 
 namespace ClientIM.Controllers
 {
+    [LoginFilter]
     public class ProfileController : Controller
     {
         Models.ClientEntities db = new Models.ClientEntities();

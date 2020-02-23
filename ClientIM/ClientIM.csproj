@@ -150,12 +150,15 @@
     <Content Include="Views\Profile\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilter\LoginFilter.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AddressController.cs" />
+    <Compile Include="Controllers\Base32.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\PictureController.cs" />
+    <Compile Include="Controllers\Totp.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

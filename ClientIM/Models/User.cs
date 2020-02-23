@@ -18,5 +18,8 @@ namespace ClientIM.Models
         public string username { get; set; }
         public string password_hash { get; set; }
         public string secret { get; set; }
+        public Nullable<int> person_id { get; set; }
+    
+        public virtual Profile Profile { get; set; }
     }
 }
