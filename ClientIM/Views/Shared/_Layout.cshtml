@@ -21,6 +21,7 @@
                 @if (Session["user_id"] != null)
                 {
                     @Html.ActionLink("All the users", "AllUsers", "Friend", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Friend Link", "FriendLink", "Friend", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 }
             </div>

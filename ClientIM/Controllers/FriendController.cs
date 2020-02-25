@@ -21,7 +21,7 @@ namespace ClientIM.Controllers
         }
 
         // GET: Friend/Details/5
-        public ActionResult FriendLink(int id)
+        public ActionResult FriendLink()
         {
             return View(db.FriendLinks);
         }

@@ -30,26 +30,29 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.requester)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.requested)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.approved)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.timestamp)
-            </td>
-            <td>
-                @Html.ActionLink("Approve", "Approval", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.requester)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.requested)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.approved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.read)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.timestamp)
+        </td>
+        <td>
+            @Html.ActionLink("Approve", "Approval", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
     }
 
 </table>

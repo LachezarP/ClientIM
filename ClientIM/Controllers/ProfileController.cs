@@ -20,16 +20,6 @@ namespace ClientIM.Controllers
             return View(theClient);
         }
 
-        public ActionResult setProfile(int id ) {
-            Models.Picture thePicture = db.Pictures.SingleOrDefault(c => c.picture_id == id);
-            Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == thePicture.person_id);
-            theClient.profile_pic = thePicture.path;
-
-            db.SaveChanges();
-
-            return View(theClient);
-        }
-
         public ActionResult Search(String name)
         {
             IEnumerable < Models.Profile > result = db.Profiles.Where(p => (p.first_name + " " + p.last_name).Contains(name));

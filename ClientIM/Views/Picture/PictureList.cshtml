@@ -38,7 +38,7 @@
             @Html.DisplayFor(modelItem => item.Profile.first_name)
         </td>
         <td>
-            @Html.ActionLink("Select As Profile Picture", "setProfile", "Profile", new { id = item.picture_id }, null) |
+            @Html.ActionLink("Select As Profile Picture", "setProfile", "Profile", new { id = item.person_id }, null) |
             @Html.ActionLink("Edit", "Edit", new { id = item.picture_id }) |
             @Html.ActionLink("Details", "Details", new { id = item.picture_id }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.picture_id })

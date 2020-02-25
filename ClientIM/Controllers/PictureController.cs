@@ -40,12 +40,12 @@ namespace ClientIM.Controllers
 
         // POST: Picture/Create
         [HttpPost]
-        public ActionResult Create(int id, FormCollection collection, HttpPostedFileBase newPicture)
+        public ActionResult Create( FormCollection collection, HttpPostedFileBase newPicture)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                int id = Int32.Parse(Session["person_id"].ToString());
                 var type = newPicture.ContentType;
 
                 string[] acceptableTypes = { "image/jpeg", "image/gif", "image/png" };
@@ -64,12 +64,13 @@ namespace ClientIM.Controllers
                         person_id = id,
                         time_info = collection["time_info"]
                     };
-
+                    Models.Profile theUser = db.Profiles.SingleOrDefault(c => c.person_id == id);
+                    theUser.profile_pic = filename;
                     db.Pictures.Add(newPic);
                     db.SaveChanges();
                 }
 
-                return RedirectToAction("Index", new { id = id });
+                return RedirectToAction("Index","Profile", new { id = id });
             }
             catch
             {
