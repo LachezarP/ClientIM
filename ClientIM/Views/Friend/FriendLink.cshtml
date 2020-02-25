@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ClientIM.Models.FriendLink>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.requester)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.requested)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.approved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.read)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.timestamp)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.requester)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.requested)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.approved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timestamp)
+            </td>
+            <td>
+                @Html.ActionLink("Approve", "Approval", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>
+

@@ -16,8 +16,8 @@ namespace ClientIM.Controllers
         public ActionResult Index()
         {
             int id = Int32.Parse(Session["person_id"].ToString());
-            IEnumerable<Models.Profile> result = db.Profiles.Where(c => c.person_id == id);
-            return View("Index", result);
+            Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
+            return View(theClient);
         }
 
         public ActionResult setProfile(int id ) {
@@ -27,7 +27,7 @@ namespace ClientIM.Controllers
 
             db.SaveChanges();
 
-            return View("Index", db.Profiles);
+            return View(theClient);
         }
 
         public ActionResult Search(String name)
@@ -37,11 +37,11 @@ namespace ClientIM.Controllers
         }
 
         // GET: Home/Details/5
-        /*public ActionResult Details(int id)
+        public ActionResult Details(int id)
         {
             Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
             return View(theClient);
-        }*/
+        }
 
         // GET: Home/Create
         public ActionResult Create()
