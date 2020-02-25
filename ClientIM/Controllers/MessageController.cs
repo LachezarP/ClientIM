@@ -12,7 +12,14 @@ namespace ClientIM.Controllers
         // GET: Message
         public ActionResult Index()
         {
-            return View(db.Profiles);
+            int id = Int32.Parse(Session["person_id"].ToString());
+            IEnumerable<Models.FriendLink> friend = db.FriendLinks.Where(p => p.requester == id || p.requested == id && p.approved.Equals("true"));
+            /*var query = db.Profiles.Join(db.FriendLinks,
+                p => p.person_id,
+                c => c.requester,
+                (p, c) => new { Profile = p, FriendLinks = c }).Where(c => c.FriendLinks.approved.Equals("true"));
+            */
+            return View("Index", friend);
         }
 
         // GET: Message/Details/5
