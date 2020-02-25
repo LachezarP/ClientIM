@@ -15,7 +15,7 @@ namespace ClientIM.Models
     public partial class Like
     {
         public int picture_id { get; set; }
-        public int profile_id { get; set; }
+        public int person_id { get; set; }
         public string timestamp { get; set; }
         public string read { get; set; }
     

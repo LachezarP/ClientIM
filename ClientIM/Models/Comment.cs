@@ -16,7 +16,7 @@ namespace ClientIM.Models
     {
         public int comment_id { get; set; }
         public int picture_id { get; set; }
-        public int profile_id { get; set; }
+        public int person_id { get; set; }
         public string comment1 { get; set; }
         public string timestamp { get; set; }
         public string read { get; set; }

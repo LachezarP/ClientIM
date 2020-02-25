@@ -24,22 +24,22 @@
           </Key>
           <Property Name="comment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="picture_id" Type="int" Nullable="false" />
-          <Property Name="profile_id" Type="int" Nullable="false" />
+          <Property Name="person_id" Type="int" Nullable="false" />
           <Property Name="comment" Type="nvarchar" MaxLength="1000" Nullable="false" />
           <Property Name="timestamp" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="read" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.Comment_like' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.Comment_like' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Comment_like">
           <Key>
             <PropertyRef Name="comment_id" />
-            <PropertyRef Name="profile_id" />
+            <PropertyRef Name="person_id" />
             <PropertyRef Name="timestamp" />
             <PropertyRef Name="read" />
           </Key>
           <Property Name="comment_id" Type="int" Nullable="false" />
-          <Property Name="profile_id" Type="int" Nullable="false" />
+          <Property Name="person_id" Type="int" Nullable="false" />
           <Property Name="timestamp" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="read" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -61,7 +61,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           <Property Name="country_code" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.FriendLink' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.FriendLink' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="FriendLink">
           <Key>
             <PropertyRef Name="requester" />
@@ -79,16 +79,16 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           <Property Name="approved" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.Like' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.Like' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Like">
           <Key>
             <PropertyRef Name="picture_id" />
-            <PropertyRef Name="profile_id" />
+            <PropertyRef Name="person_id" />
             <PropertyRef Name="timestamp" />
             <PropertyRef Name="read" />
           </Key>
           <Property Name="picture_id" Type="int" Nullable="false" />
-          <Property Name="profile_id" Type="int" Nullable="false" />
+          <Property Name="person_id" Type="int" Nullable="false" />
           <Property Name="timestamp" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="read" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -168,7 +168,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
               <PropertyRef Name="person_id" />
             </Principal>
             <Dependent Role="Comment_like">
-              <PropertyRef Name="profile_id" />
+              <PropertyRef Name="person_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -192,7 +192,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
               <PropertyRef Name="person_id" />
             </Principal>
             <Dependent Role="Comment">
-              <PropertyRef Name="profile_id" />
+              <PropertyRef Name="person_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -216,7 +216,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
               <PropertyRef Name="person_id" />
             </Principal>
             <Dependent Role="Like">
-              <PropertyRef Name="profile_id" />
+              <PropertyRef Name="person_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -304,7 +304,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           <EntitySet Name="Comment_like" EntityType="Self.Comment_like" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Comment_like].[comment_id] AS [comment_id], 
-    [Comment_like].[profile_id] AS [profile_id], 
+    [Comment_like].[person_id] AS [person_id], 
     [Comment_like].[timestamp] AS [timestamp], 
     [Comment_like].[read] AS [read]
     FROM [dbo].[Comment_like] AS [Comment_like]</DefiningQuery>
@@ -322,7 +322,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           <EntitySet Name="Like" EntityType="Self.Like" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Like].[picture_id] AS [picture_id], 
-    [Like].[profile_id] AS [profile_id], 
+    [Like].[person_id] AS [person_id], 
     [Like].[timestamp] AS [timestamp], 
     [Like].[read] AS [read]
     FROM [dbo].[Like] AS [Like]</DefiningQuery>
@@ -406,7 +406,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
           </Key>
           <Property Name="comment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="picture_id" Type="Int32" Nullable="false" />
-          <Property Name="profile_id" Type="Int32" Nullable="false" />
+          <Property Name="person_id" Type="Int32" Nullable="false" />
           <Property Name="comment1" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="read" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -495,12 +495,12 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
         <EntityType Name="Comment_like">
           <Key>
             <PropertyRef Name="comment_id" />
-            <PropertyRef Name="profile_id" />
+            <PropertyRef Name="person_id" />
             <PropertyRef Name="timestamp" />
             <PropertyRef Name="read" />
           </Key>
           <Property Name="comment_id" Type="Int32" Nullable="false" />
-          <Property Name="profile_id" Type="Int32" Nullable="false" />
+          <Property Name="person_id" Type="Int32" Nullable="false" />
           <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="read" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Profile" Relationship="Self.FK_Comment_like_Profile" FromRole="Comment_like" ToRole="Profile" />
@@ -526,12 +526,12 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
         <EntityType Name="Like">
           <Key>
             <PropertyRef Name="picture_id" />
-            <PropertyRef Name="profile_id" />
+            <PropertyRef Name="person_id" />
             <PropertyRef Name="timestamp" />
             <PropertyRef Name="read" />
           </Key>
           <Property Name="picture_id" Type="Int32" Nullable="false" />
-          <Property Name="profile_id" Type="Int32" Nullable="false" />
+          <Property Name="person_id" Type="Int32" Nullable="false" />
           <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="read" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Profile" Relationship="Self.FK_Like_Profile" FromRole="Like" ToRole="Profile" />
@@ -580,7 +580,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
               <PropertyRef Name="person_id" />
             </Principal>
             <Dependent Role="Comment">
-              <PropertyRef Name="profile_id" />
+              <PropertyRef Name="person_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -640,7 +640,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
               <PropertyRef Name="person_id" />
             </Principal>
             <Dependent Role="Comment_like">
-              <PropertyRef Name="profile_id" />
+              <PropertyRef Name="person_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -652,7 +652,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
               <PropertyRef Name="person_id" />
             </Principal>
             <Dependent Role="Like">
-              <PropertyRef Name="profile_id" />
+              <PropertyRef Name="person_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -782,7 +782,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
               <MappingFragment StoreEntitySet="Comment">
                 <ScalarProperty Name="comment_id" ColumnName="comment_id" />
                 <ScalarProperty Name="picture_id" ColumnName="picture_id" />
-                <ScalarProperty Name="profile_id" ColumnName="profile_id" />
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
                 <ScalarProperty Name="comment1" ColumnName="comment" />
                 <ScalarProperty Name="timestamp" ColumnName="timestamp" />
                 <ScalarProperty Name="read" ColumnName="read" />
@@ -860,7 +860,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
             <EntityTypeMapping TypeName="ClientModel.Comment_like">
               <MappingFragment StoreEntitySet="Comment_like">
                 <ScalarProperty Name="comment_id" ColumnName="comment_id" />
-                <ScalarProperty Name="profile_id" ColumnName="profile_id" />
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
                 <ScalarProperty Name="timestamp" ColumnName="timestamp" />
                 <ScalarProperty Name="read" ColumnName="read" />
               </MappingFragment>
@@ -882,7 +882,7 @@ warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.
             <EntityTypeMapping TypeName="ClientModel.Like">
               <MappingFragment StoreEntitySet="Like">
                 <ScalarProperty Name="picture_id" ColumnName="picture_id" />
-                <ScalarProperty Name="profile_id" ColumnName="profile_id" />
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
                 <ScalarProperty Name="timestamp" ColumnName="timestamp" />
                 <ScalarProperty Name="read" ColumnName="read" />
               </MappingFragment>

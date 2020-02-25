@@ -36,6 +36,23 @@ namespace ClientIM.Models
 
     }
 
+    [MetadataType(typeof(ValidatingUser))]
+    public partial class User
+    {
+
+    }
+
+    public class ValidatingUser
+    {
+        [Display(Name = "Username")]
+        [Required(ErrorMessage = "Please enter a username")]
+        [StringLength(50, MinimumLength = 1)]
+        public string username;
+
+        [Display(Name = "Password")]
+        public string password_hash;
+    }
+
     public class ValaditingProfile
     {
         [Display(Name = "First Name")]

@@ -15,7 +15,7 @@ namespace ClientIM.Models
     public partial class Comment_like
     {
         public int comment_id { get; set; }
-        public int profile_id { get; set; }
+        public int person_id { get; set; }
         public string timestamp { get; set; }
         public string read { get; set; }
     
