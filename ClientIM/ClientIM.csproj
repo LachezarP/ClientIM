@@ -155,6 +155,7 @@
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\Base32.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\FriendController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
@@ -242,6 +243,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Friend\FriendLink.cshtml" />
+    <Content Include="Views\Friend\AllUsers.cshtml" />
+    <Content Include="Views\Friend\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
