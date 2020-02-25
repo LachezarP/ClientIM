@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ClientIM.Models.Profile>
+﻿@model ClientIM.Models.Profile
 
 @{
     ViewBag.Title = "Index";
@@ -6,55 +6,67 @@
 
 <h2>Index</h2>
 
-<table class="table">
-    <tr>
-        <th>
+<form method="get" action="/Home/Search ">
+    Search: <input name="name" type="text" /> <input type="submit" name="search" value="Search" />
+
+<div>
+    <h4>Profile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
             @Html.DisplayNameFor(model => model.first_name)
-        </th>
-        <th>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.first_name)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.last_name)
-        </th>
-        <th>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_name)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.notes)
-        </th>
-        <th>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.notes)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.gender)
-        </th>
-        <th>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gender)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.profile_pic)
-        </th>
-        <th>
+        </dt>
+
+        <dd>
+            @if (Model.profile_pic != null)
+            {
+                <img style="width:200px; height:200px" src="@Url.Content("~/Images/" + Model.profile_pic)" />
+            }
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.privacy_flag)
-        </th>
-        <th></th>
-    </tr>
+        </dt>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.first_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.last_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.notes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.gender)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.profile_pic)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.privacy_flag)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.person_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.person_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.person_id })
-        </td>
-    </tr>
-}
+        <dd>
+            @Html.DisplayFor(model => model.privacy_flag)
+        </dd>
 
-</table>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit Profile", "Edit", new { id = Model.person_id }) |
+    @Html.ActionLink("Add a new picture", "Create", "Picture", new { id = Model.person_id }, null)
+</p>
