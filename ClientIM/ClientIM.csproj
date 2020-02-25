@@ -156,6 +156,7 @@
     <Compile Include="Controllers\Base32.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="Controllers\Totp.cs" />
@@ -237,10 +238,10 @@
     <Content Include="Views\Picture\Create.cshtml" />
     <Content Include="Views\Picture\Edit.cshtml" />
     <Content Include="Views\Picture\Delete.cshtml" />
-    <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\Create.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -250,6 +251,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="Views\Message\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -34,13 +34,27 @@ namespace ClientIM.Controllers
                     if (theCode.Equals(collection["validation"]))
                     {
                         Session["user_id"] = theUser.user_id;
-                        return RedirectToAction("Index", "Profile");
+                        if (theUser.person_id != null)
+                        {
+                            Session["person_id"] = theUser.person_id;
+                            return RedirectToAction("Index", "Profile");
+                        }
+                        else
+                        {
+                            return RedirectToAction("Create", "Profile");
+                        }
                     }
                 }
                 else
                 {
                     Session["user_id"] = theUser.user_id;
-                    return RedirectToAction("Index", "Profile");
+                    if (theUser.person_id != null)
+                    {
+                        Session["person_id"] = theUser.person_id;
+                        return RedirectToAction("Index", "Profile");
+                    }
+                    else
+                        return RedirectToAction("Create", "Profile");
                 }
                 ViewBag.error = "Wrong Username/Password/Validation combination!";
                 return View();
