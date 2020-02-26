@@ -1,11 +1,13 @@
 ﻿@model IEnumerable<ClientIM.Models.FriendLink>
 
 @{
+    int personId = Int32.Parse(Session["person_id"].ToString());
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Friend Links</h2>
 
+<h3>Friend Requests</h3>
 <table class="table">
     <tr>
         <th>
@@ -30,30 +32,36 @@
 
     @foreach (var item in Model)
     {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.requester)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.requested)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.status)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.approved)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.read)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.timestamp)
-        </td>
-        <td>
-            @Html.ActionLink("Approve", "Approval", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
+        if (item.requested == personId)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.requester)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.requested)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.approved)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.read)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.timestamp)
+                </td>
+                @if (item.approved != "true")
+                {
+                    <td>
+                        @Html.ActionLink("Approve", "Approve", "Friend", new { id = item.requested }, null)
+                        @Html.ActionLink("Refuse", "Refuse", new { id = item.requested })
+                    </td>
+                }
+            </tr>
+        }
     }
 
 </table>
-

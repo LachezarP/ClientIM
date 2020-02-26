@@ -9,96 +9,70 @@ namespace ClientIM.Controllers
     public class FriendController : Controller
     {
         Models.ClientEntities db = new Models.ClientEntities();
+
         // GET: Friend
-        public ActionResult Index()
-        {
-            return View(db.Profiles);
-        }
-
-        public ActionResult AllUsers()
-        {
-            return View(db.Profiles);
-        }
-
-        // GET: Friend/Details/5
         public ActionResult FriendLink()
         {
             return View(db.FriendLinks);
         }
 
-        // GET: Friend/Create
-        public ActionResult Create()
+        public ActionResult AllUsers()
         {
-            return View();
+            int personId = Int32.Parse(Session["person_id"].ToString());
+
+            Models.Profile theUser = db.Profiles.SingleOrDefault(c => c.person_id == personId);
+
+            IEnumerable<Models.FriendLink> result = db.FriendLinks.Where(p => p.requester == personId);
+            ViewBag.IEnumerable = result;
+
+            return View(db.Profiles);
         }
 
-        // POST: Friend/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
+        public ActionResult Approve(int id) {
+            int personId = Int32.Parse(Session["person_id"].ToString());
+            Models.FriendLink theLink = db.FriendLinks.SingleOrDefault(c => c.requested == id);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            theLink.approved = "true";
+            theLink.status = "Friends";
+
+            db.SaveChanges();
+
+            return View("FriendLink", db.FriendLinks);
         }
 
-        // GET: Friend/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Refuse(int id)
         {
-            return View();
+
+            return View(db.FriendLinks);
         }
 
-        // POST: Friend/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult CreateFriendLink(int id)
         {
-            try
-            {
-                // TODO: Add update logic here
+            int personId = Int32.Parse(Session["person_id"].ToString());
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            Models.FriendLink theLink = db.FriendLinks.SingleOrDefault(c => c.requester == personId && c.requested == id);
 
-        // GET: Friend/Delete/5
-        public ActionResult Delete(int id)
-        {
-            Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
+            if (theLink == null) {
 
-            return View(theClient);
-        }
+                Models.FriendLink newLink = new Models.FriendLink()
+                {
+                    requester = personId,
+                    requested = id,
+                    approved = "Pending",
+                    status = "Strangers",
+                    read = "Not read",
+                    timestamp = DateTime.Now.ToString()
+                };
 
-        // POST: Home/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-                Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
-
-                db.Addresses.RemoveRange(theClient.Addresses);
-                db.Contacts.RemoveRange(theClient.Contacts);
-                db.Pictures.RemoveRange(theClient.Pictures);
-                db.Profiles.Remove(theClient);
+                db.FriendLinks.Add(newLink);
                 db.SaveChanges();
 
-                return RedirectToAction("AllUsers", "Friend");
+                ViewBag.person_id = newLink.Profile.person_id;
+
+                return RedirectToAction("AllUsers");
             }
-            catch
-            {
-                return View();
-            }
+            else
+                return RedirectToAction("AllUsers");
         }
     }
 }

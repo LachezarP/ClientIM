@@ -30,7 +30,7 @@
           <Property Name="read" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.Comment_like' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.Comment_like' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Comment_like">
           <Key>
             <PropertyRef Name="comment_id" />
@@ -60,16 +60,9 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
           <Property Name="country_name" Type="nvarchar" MaxLength="80" Nullable="false" />
           <Property Name="country_code" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.FriendLink' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="FriendLink">
           <Key>
-            <PropertyRef Name="requester" />
-            <PropertyRef Name="requested" />
-            <PropertyRef Name="status" />
-            <PropertyRef Name="timestamp" />
-            <PropertyRef Name="read" />
-            <PropertyRef Name="approved" />
+            <PropertyRef Name="friendLink_id" />
           </Key>
           <Property Name="requester" Type="int" Nullable="false" />
           <Property Name="requested" Type="int" Nullable="false" />
@@ -77,9 +70,10 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
           <Property Name="timestamp" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="read" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="approved" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="friendLink_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.Like' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'F:\CLIENTIM\CLIENTIM\CLIENTIM\APP_DATA\CLIENT.MDF.dbo.Like' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Like">
           <Key>
             <PropertyRef Name="picture_id" />
@@ -297,6 +291,7 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
           <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FriendLink" EntityType="Self.FriendLink" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Picture" EntityType="Self.Picture" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Profile" EntityType="Self.Profile" Schema="dbo" store:Type="Tables" />
@@ -308,16 +303,6 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
     [Comment_like].[timestamp] AS [timestamp], 
     [Comment_like].[read] AS [read]
     FROM [dbo].[Comment_like] AS [Comment_like]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="FriendLink" EntityType="Self.FriendLink" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [FriendLink].[requester] AS [requester], 
-    [FriendLink].[requested] AS [requested], 
-    [FriendLink].[status] AS [status], 
-    [FriendLink].[timestamp] AS [timestamp], 
-    [FriendLink].[read] AS [read], 
-    [FriendLink].[approved] AS [approved]
-    FROM [dbo].[FriendLink] AS [FriendLink]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Like" EntityType="Self.Like" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -432,6 +417,20 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
           <Property Name="country_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Addresses" Relationship="Self.FK_Address_Country" FromRole="Countries" ToRole="Address" />
         </EntityType>
+        <EntityType Name="FriendLink">
+          <Key>
+            <PropertyRef Name="friendLink_id" />
+          </Key>
+          <Property Name="requester" Type="Int32" Nullable="false" />
+          <Property Name="requested" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="read" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="approved" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="friendLink_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK_Requested_Profile" FromRole="FriendLink" ToRole="Profile" />
+          <NavigationProperty Name="Profile1" Relationship="Self.FK_Requester_Profile" FromRole="FriendLink" ToRole="Profile" />
+        </EntityType>
         <EntityType Name="Message">
           <Key>
             <PropertyRef Name="message_id" />
@@ -472,13 +471,13 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
           <NavigationProperty Name="Addresses" Relationship="Self.FK_Address_Profile" FromRole="Profile" ToRole="Address" />
           <NavigationProperty Name="Comments" Relationship="Self.FK_Comment_Profile" FromRole="Profile" ToRole="Comment" />
           <NavigationProperty Name="Contacts" Relationship="Self.FK_Contact_Profile" FromRole="Profile" ToRole="Contact" />
+          <NavigationProperty Name="FriendLinks" Relationship="Self.FK_Requested_Profile" FromRole="Profile" ToRole="FriendLink" />
+          <NavigationProperty Name="FriendLinks1" Relationship="Self.FK_Requester_Profile" FromRole="Profile" ToRole="FriendLink" />
           <NavigationProperty Name="Messages" Relationship="Self.FK_Receiver_Profile" FromRole="Profile" ToRole="Message" />
           <NavigationProperty Name="Messages1" Relationship="Self.FK_Sender_Profile" FromRole="Profile" ToRole="Message" />
           <NavigationProperty Name="Pictures" Relationship="Self.FK_Picture_Profile" FromRole="Profile" ToRole="Picture" />
           <NavigationProperty Name="Comment_like" Relationship="Self.FK_Comment_like_Profile" FromRole="Profile" ToRole="Comment_like" />
           <NavigationProperty Name="Likes" Relationship="Self.FK_Like_Profile" FromRole="Profile" ToRole="Like" />
-          <NavigationProperty Name="FriendLinks" Relationship="Self.FK_Requested_Profile" FromRole="Profile" ToRole="FriendLink" />
-          <NavigationProperty Name="FriendLinks1" Relationship="Self.FK_Requester_Profile" FromRole="Profile" ToRole="FriendLink" />
           <NavigationProperty Name="Users" Relationship="Self.FK_User_Profile" FromRole="Profile" ToRole="User" />
         </EntityType>
         <EntityType Name="User">
@@ -504,24 +503,6 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
           <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="read" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Profile" Relationship="Self.FK_Comment_like_Profile" FromRole="Comment_like" ToRole="Profile" />
-        </EntityType>
-        <EntityType Name="FriendLink">
-          <Key>
-            <PropertyRef Name="requester" />
-            <PropertyRef Name="requested" />
-            <PropertyRef Name="status" />
-            <PropertyRef Name="timestamp" />
-            <PropertyRef Name="read" />
-            <PropertyRef Name="approved" />
-          </Key>
-          <Property Name="requester" Type="Int32" Nullable="false" />
-          <Property Name="requested" Type="Int32" Nullable="false" />
-          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="read" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="approved" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Profile" Relationship="Self.FK_Requested_Profile" FromRole="FriendLink" ToRole="Profile" />
-          <NavigationProperty Name="Profile1" Relationship="Self.FK_Requester_Profile" FromRole="FriendLink" ToRole="Profile" />
         </EntityType>
         <EntityType Name="Like">
           <Key>
@@ -596,6 +577,30 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Requested_Profile">
+          <End Role="Profile" Type="Self.Profile" Multiplicity="1" />
+          <End Role="FriendLink" Type="Self.FriendLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="FriendLink">
+              <PropertyRef Name="requested" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Requester_Profile">
+          <End Role="Profile" Type="Self.Profile" Multiplicity="1" />
+          <End Role="FriendLink" Type="Self.FriendLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="FriendLink">
+              <PropertyRef Name="requester" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Receiver_Profile">
           <End Role="Profile" Type="Self.Profile" Multiplicity="1" />
           <End Role="Message" Type="Self.Message" Multiplicity="*" />
@@ -656,30 +661,6 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Requested_Profile">
-          <End Role="Profile" Type="Self.Profile" Multiplicity="1" />
-          <End Role="FriendLink" Type="Self.FriendLink" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Profile">
-              <PropertyRef Name="person_id" />
-            </Principal>
-            <Dependent Role="FriendLink">
-              <PropertyRef Name="requested" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Requester_Profile">
-          <End Role="Profile" Type="Self.Profile" Multiplicity="1" />
-          <End Role="FriendLink" Type="Self.FriendLink" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Profile">
-              <PropertyRef Name="person_id" />
-            </Principal>
-            <Dependent Role="FriendLink">
-              <PropertyRef Name="requester" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_User_Profile">
           <End Role="Profile" Type="Self.Profile" Multiplicity="0..1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
@@ -697,12 +678,12 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
           <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="Contacts" EntityType="Self.Contact" />
           <EntitySet Name="Countries" EntityType="Self.Country" />
+          <EntitySet Name="FriendLinks" EntityType="Self.FriendLink" />
           <EntitySet Name="Messages" EntityType="Self.Message" />
           <EntitySet Name="Pictures" EntityType="Self.Picture" />
           <EntitySet Name="Profiles" EntityType="Self.Profile" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <EntitySet Name="Comment_like" EntityType="Self.Comment_like" />
-          <EntitySet Name="FriendLinks" EntityType="Self.FriendLink" />
           <EntitySet Name="Likes" EntityType="Self.Like" />
           <AssociationSet Name="FK_Address_Country" Association="Self.FK_Address_Country">
             <End Role="Countries" EntitySet="Countries" />
@@ -724,6 +705,14 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
             <End Role="Profile" EntitySet="Profiles" />
             <End Role="Contact" EntitySet="Contacts" />
           </AssociationSet>
+          <AssociationSet Name="FK_Requested_Profile" Association="Self.FK_Requested_Profile">
+            <End Role="Profile" EntitySet="Profiles" />
+            <End Role="FriendLink" EntitySet="FriendLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Requester_Profile" Association="Self.FK_Requester_Profile">
+            <End Role="Profile" EntitySet="Profiles" />
+            <End Role="FriendLink" EntitySet="FriendLinks" />
+          </AssociationSet>
           <AssociationSet Name="FK_Receiver_Profile" Association="Self.FK_Receiver_Profile">
             <End Role="Profile" EntitySet="Profiles" />
             <End Role="Message" EntitySet="Messages" />
@@ -743,14 +732,6 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
           <AssociationSet Name="FK_Like_Profile" Association="Self.FK_Like_Profile">
             <End Role="Profile" EntitySet="Profiles" />
             <End Role="Like" EntitySet="Likes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Requested_Profile" Association="Self.FK_Requested_Profile">
-            <End Role="Profile" EntitySet="Profiles" />
-            <End Role="FriendLink" EntitySet="FriendLinks" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Requester_Profile" Association="Self.FK_Requester_Profile">
-            <End Role="Profile" EntitySet="Profiles" />
-            <End Role="FriendLink" EntitySet="FriendLinks" />
           </AssociationSet>
           <AssociationSet Name="FK_User_Profile" Association="Self.FK_User_Profile">
             <End Role="Profile" EntitySet="Profiles" />
@@ -805,6 +786,19 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
                 <ScalarProperty Name="country_id" ColumnName="country_id" />
                 <ScalarProperty Name="country_name" ColumnName="country_name" />
                 <ScalarProperty Name="country_code" ColumnName="country_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FriendLinks">
+            <EntityTypeMapping TypeName="ClientModel.FriendLink">
+              <MappingFragment StoreEntitySet="FriendLink">
+                <ScalarProperty Name="requester" ColumnName="requester" />
+                <ScalarProperty Name="requested" ColumnName="requested" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="read" ColumnName="read" />
+                <ScalarProperty Name="approved" ColumnName="approved" />
+                <ScalarProperty Name="friendLink_id" ColumnName="friendLink_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -863,18 +857,6 @@ warning 6002: The table/view 'C:\USERS\LACHEZAR\SOURCE\REPOS\CLIENTIM\CLIENTIM\A
                 <ScalarProperty Name="person_id" ColumnName="person_id" />
                 <ScalarProperty Name="timestamp" ColumnName="timestamp" />
                 <ScalarProperty Name="read" ColumnName="read" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="FriendLinks">
-            <EntityTypeMapping TypeName="ClientModel.FriendLink">
-              <MappingFragment StoreEntitySet="FriendLink">
-                <ScalarProperty Name="requester" ColumnName="requester" />
-                <ScalarProperty Name="requested" ColumnName="requested" />
-                <ScalarProperty Name="status" ColumnName="status" />
-                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
-                <ScalarProperty Name="read" ColumnName="read" />
-                <ScalarProperty Name="approved" ColumnName="approved" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

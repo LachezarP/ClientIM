@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -20,8 +21,9 @@
                 @Html.ActionLink("Social Media Application", "Index", "Profile", new { area = "" }, new { @class = "navbar-brand" })
                 @if (Session["user_id"] != null)
                 {
+                    int personId = Int32.Parse(Session["person_id"].ToString());
                     @Html.ActionLink("All the users", "AllUsers", "Friend", new { area = "" }, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Friend Link", "FriendLink", "Friend", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Friend Link", "FriendLink", "Friend", new { id = personId }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 }
             </div>

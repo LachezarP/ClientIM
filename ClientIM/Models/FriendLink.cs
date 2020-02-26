@@ -20,6 +20,7 @@ namespace ClientIM.Models
         public string timestamp { get; set; }
         public string read { get; set; }
         public string approved { get; set; }
+        public int friendLink_id { get; set; }
     
         public virtual Profile Profile { get; set; }
         public virtual Profile Profile1 { get; set; }

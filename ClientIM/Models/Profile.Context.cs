@@ -29,12 +29,12 @@ namespace ClientIM.Models
         public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<FriendLink> FriendLinks { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
         public virtual DbSet<Picture> Pictures { get; set; }
         public virtual DbSet<Profile> Profiles { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Comment_like> Comment_like { get; set; }
-        public virtual DbSet<FriendLink> FriendLinks { get; set; }
         public virtual DbSet<Like> Likes { get; set; }
     }
 }

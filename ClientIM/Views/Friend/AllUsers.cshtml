@@ -1,14 +1,12 @@
 ﻿@model IEnumerable<ClientIM.Models.Profile>
 
 @{
+    int personId = Int32.Parse(Session["person_id"].ToString());
     ViewBag.Title = "AllUsers";
 }
 
 <h2>AllUsers</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -32,32 +30,36 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.first_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.last_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.notes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.gender)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.profile_pic)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.privacy_flag)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.person_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.person_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.person_id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+
+        if (item.person_id != personId)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.first_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.last_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.notes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.profile_pic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.privacy_flag)
+                </td>
+                <td>
+                    @Html.ActionLink("Send Friend Request", "CreateFriendLink", "Friend", new { id = item.person_id }, null)
+                </td>
+            </tr>
+        }
+    }
 
 </table>
+
