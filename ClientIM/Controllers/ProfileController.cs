@@ -13,6 +13,7 @@ namespace ClientIM.Controllers
     {
         Models.ClientEntities db = new Models.ClientEntities();
         // GET: Home
+        [NotifyFriendRequestFilter]
         public ActionResult Index()
         {
             int id = Int32.Parse(Session["person_id"].ToString());
@@ -56,10 +57,10 @@ namespace ClientIM.Controllers
                 newClient.gender = collection["gender"];
                 newUser.person_id = newClient.person_id;
 
+                Session["person_id"] = newUser.person_id;
+
                 db.Profiles.Add(newClient);
                 db.SaveChanges();
-
-                Session["person_id"] = newUser.person_id;
 
                 return RedirectToAction("Index");
             }

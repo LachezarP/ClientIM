@@ -151,6 +151,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionFilter\LoginFilter.cs" />
+    <Compile Include="ActionFilter\NotifyFriendRequestFilter.cs" />
+    <Compile Include="ActionFilter\ReadFriendLinkFilter.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\Base32.cs" />

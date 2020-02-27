@@ -22,6 +22,7 @@ namespace ClientIM.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection collection)
         {
+            Session["friend_request"] = 0;
             string username = collection["username"];
             Models.User theUser = db.Users.SingleOrDefault(u => u.username.Equals(username));
             if (theUser != null && 
