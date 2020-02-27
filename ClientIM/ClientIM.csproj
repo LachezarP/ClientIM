@@ -120,6 +120,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Profile.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\default.jpg" />
     <Content Include="Models\Profile.edmx.diagram">
       <DependentUpon>Profile.edmx</DependentUpon>
     </Content>
@@ -256,9 +257,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
