@@ -10,6 +10,10 @@
     <h4>Profile</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dd>
+            <img style="width:200px; height:200px" src="@Url.Content("~/Images/" + Model.profile_pic)" />
+        </dd>
+        
         <dt>
             @Html.DisplayNameFor(model => model.first_name)
         </dt>
@@ -40,14 +44,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.gender)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.profile_pic)
-        </dt>
-
-        <dd>
-            <img style="width:200px; height:200px" src="@Url.Content("~/Images/" + Model.profile_pic)" />
         </dd>
 
         <dt>

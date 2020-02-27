@@ -15,7 +15,7 @@ namespace ClientIM.Controllers
         public ActionResult Index()
         {
             int id = Int32.Parse(Session["person_id"].ToString());
-            IEnumerable<Models.FriendLink> friend = db.FriendLinks.Where(p => p.requester == id || p.requested == id && p.approved.Equals("true"));
+            IEnumerable<Models.FriendLink> friend = db.FriendLinks.Where(p => (p.requester == id || p.requested == id) && p.approved.Equals("true"));
             
             return View("Index", friend);
         }

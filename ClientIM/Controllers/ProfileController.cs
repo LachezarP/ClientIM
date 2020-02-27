@@ -58,7 +58,7 @@ namespace ClientIM.Controllers
                 db.Profiles.Add(newClient);
                 db.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Profile");
             }
             catch
             {

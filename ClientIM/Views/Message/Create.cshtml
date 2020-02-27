@@ -19,9 +19,9 @@
     {
         <tr>
             @if (item.receiver == id || item.sender == id)
-            {                
+            {
             <td>
-                @if (item.receiver != id)
+                @if (item.sender == item.Profile.person_id)
                 {
                     @Html.DisplayFor(modelItem => item.Profile.first_name)
                 }
