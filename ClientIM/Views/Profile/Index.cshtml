@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    string space = " | ";
 }
 
 <h2>Index</h2>
@@ -63,6 +64,22 @@
 <p>
     @Html.ActionLink("Edit Profile", "Edit", new { id = Model.person_id }) |
     @Html.ActionLink("Add a new picture", "Create", "Picture", new { id = Model.person_id }, null) |
-    @Html.ActionLink("View Pictures", "Index", "Picture", new { id = Model.person_id }, null) |
-    @Html.ActionLink("View Feed", "Index", "Feed", new { id = Model.person_id }, null)
+    @Html.ActionLink("Address", "Index", "Address", new { id = Model.person_id }, null) |
+
+    @if (Model.privacy_flag == null)
+    {
+        @Html.ActionLink("Turn Privacy Flag On", "PrivacyOn", "Profile", new { id = Model.person_id }, null)
+
+        @space
+
+        @Html.ActionLink("Turn Privacy Flag Off", "PrivacyOff", "Profile", new { id = Model.person_id }, null)
+    }
+    else if (Model.privacy_flag == "On")
+    {
+        @Html.ActionLink("Turn Privacy Flag Off", "PrivacyOff", "Profile", new { id = Model.person_id }, null)
+    }
+    else
+    {
+        @Html.ActionLink("Turn Privacy Flag On", "PrivacyOn", "Profile", new { id = Model.person_id }, null)
+    }
 </p>

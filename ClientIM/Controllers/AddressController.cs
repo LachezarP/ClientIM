@@ -12,10 +12,11 @@ namespace ClientIM.Controllers
     {
         Models.ClientEntities db = new Models.ClientEntities();
         // GET: Address
+        [AddressFilter]
         public ActionResult Index(int id)
         {
             ViewBag.id = id;
-
+            Session["Address_person_id"] = id;
             Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
 
             return View(theClient);

@@ -167,6 +167,7 @@
     <Content Include="Views\Profile\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilter\AddressFilter.cs" />
     <Compile Include="ActionFilter\LoginFilter.cs" />
     <Compile Include="ActionFilter\NotifyFriendRequestFilter.cs" />
     <Compile Include="ActionFilter\ReadFriendLinkFilter.cs" />
