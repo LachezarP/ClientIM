@@ -18,7 +18,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Social Media Application", "Index", "Profile", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Social Media Application", "Index", "Feed", new { area = "" }, new { @class = "navbar-brand" })
                 @if (Session["user_id"] != null && Session["person_id"] != null)
                 {
                     int personId = Int32.Parse(Session["person_id"].ToString());
@@ -27,6 +27,7 @@
                     @Html.ActionLink("Message(" + counterMessage + ")", "Index", "Message", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("All the users", "AllUsers", "Friend", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Friend Requests(" + counterFriend + ")", "FriendLink", "Friend", new { id = personId }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Profile", "Index", "Profile" ,new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 }
             </div>
