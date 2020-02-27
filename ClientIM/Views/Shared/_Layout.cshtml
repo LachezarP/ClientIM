@@ -22,10 +22,11 @@
                 @if (Session["user_id"] != null && Session["person_id"] != null)
                 {
                     int personId = Int32.Parse(Session["person_id"].ToString());
-                    int counter = Int32.Parse(Session["friend_request"].ToString());
-                    @Html.ActionLink("Message", "Index", "Message", new { area = "" }, new { @class = "navbar-brand" })
+                    int counterFriend = Int32.Parse(Session["friend_request"].ToString());
+                    int counterMessage = Int32.Parse(Session["new_message"].ToString());
+                    @Html.ActionLink("Message(" + counterMessage + ")", "Index", "Message", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("All the users", "AllUsers", "Friend", new { area = "" }, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Friend Requests(" + counter + ")", "FriendLink", "Friend", new { id = personId }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Friend Requests(" + counterFriend + ")", "FriendLink", "Friend", new { id = personId }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 }
             </div>

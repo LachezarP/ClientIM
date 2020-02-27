@@ -14,14 +14,29 @@ namespace ClientIM.ActionFilter
 
             int personId = Int32.Parse(filterContext.HttpContext.Session["person_id"].ToString());
 
-            int counter = Int32.Parse(filterContext.HttpContext.Session["friend_request"].ToString());
+            int counterFriend = Int32.Parse(filterContext.HttpContext.Session["friend_request"].ToString());
 
-            foreach (Models.FriendLink MF in db.FriendLinks.ToList())
+            int counterMessage = Int32.Parse(filterContext.HttpContext.Session["new_message"].ToString());
+            if (counterFriend == 0)
             {
-                if (MF.requested == personId && MF.read.Equals("Not read"))
+                foreach (Models.FriendLink MF in db.FriendLinks.ToList())
                 {
-                    counter++;
-                    filterContext.HttpContext.Session["friend_request"] = counter;
+                    if (MF.requested == personId && MF.read.Equals("Not read"))
+                    {
+                        counterFriend++;
+                        filterContext.HttpContext.Session["friend_request"] = counterFriend;
+                    }
+                }
+            }
+
+            if (counterMessage == 0) { 
+                foreach (Models.Message MM in db.Messages.ToList())
+                {
+                    if (MM.receiver == personId && MM.read.Equals("Not read"))
+                    {
+                        counterMessage++;
+                        filterContext.HttpContext.Session["new_message"] = counterMessage;
+                    }
                 }
             }
         }

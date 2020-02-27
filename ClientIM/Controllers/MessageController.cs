@@ -20,6 +20,7 @@ namespace ClientIM.Controllers
             return View("Index", friend);
         }
 
+
         // GET: Message/Details/5
         public ActionResult Details(int id)
         {
@@ -29,9 +30,22 @@ namespace ClientIM.Controllers
         // GET: Message/Create
         public ActionResult Create(int id)
         {
+            int counter = 0;
             ViewBag.id = id;
+            int user = Int32.Parse(Session["person_id"].ToString());
+            int counterMessage = Int32.Parse(Session["new_message"].ToString());
+            IEnumerable<Models.Message> theMessage = db.Messages.Where(p => p.receiver == user && p.sender == id);
+            foreach(var item in theMessage)
+            {         
+                if(item.read == "Not read")
+                    counter++;
+                item.read = "Read";
+            }
 
-            int user= Int32.Parse(Session["person_id"].ToString());
+            counterMessage -= counter;
+            Session["new_message"] = counterMessage;
+            db.SaveChanges();
+
             ViewBag.message = db.Messages.Where(p => p.receiver == user || p.sender == user);
 
             return View();
@@ -50,7 +64,7 @@ namespace ClientIM.Controllers
                     receiver = id,
                     message1 = collection["message1"],
                     timestamp = DateTime.Now.ToString(),
-                    read = "Not Read"
+                    read = "Not read"
                 };
 
                 db.Messages.Add(newMessage);

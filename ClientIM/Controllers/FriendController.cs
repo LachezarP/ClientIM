@@ -15,6 +15,7 @@ namespace ClientIM.Controllers
         [ReadFriendLinkFilter]
         public ActionResult FriendLink()
         {
+            Session["friend_request"] = 0;
             return View(db.FriendLinks);
         }
 
@@ -62,13 +63,22 @@ namespace ClientIM.Controllers
             if (requester == personId)
             {
                 Models.FriendLink theLinkRequester = db.FriendLinks.SingleOrDefault(c => c.requester == personId && c.requested == requested);
-
+                IEnumerable<Models.Message> theMessage = db.Messages.Where(c => (c.sender == personId && c.receiver == requested) || (c.sender == requested && c.receiver == personId));
+                foreach(var item in theMessage)
+                {
+                    db.Messages.Remove(item);
+                }
                 db.FriendLinks.Remove(theLinkRequester);
                 db.SaveChanges();
             }
             else
             {
                 Models.FriendLink theLinkRequested = db.FriendLinks.SingleOrDefault(c => c.requester == requester && c.requested == personId);
+                IEnumerable<Models.Message> theMessage = db.Messages.Where(c => (c.sender == personId && c.receiver == requester) || (c.sender == requester && c.receiver == personId));
+                foreach (var item in theMessage)
+                {
+                    db.Messages.Remove(item);
+                }
                 db.FriendLinks.Remove(theLinkRequested);
                 db.SaveChanges();
             }

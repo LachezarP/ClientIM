@@ -45,20 +45,24 @@ namespace ClientIM.Controllers
                 int id = Int32.Parse(Session["user_id"].ToString());
                 Models.Profile newClient = new Models.Profile();
                 Models.User newUser = db.Users.SingleOrDefault(p => p.user_id == id);
+
                 newClient.first_name = collection["first_name"];
                 newClient.last_name = collection["last_name"];
                 newClient.notes= collection["notes"];
                 newClient.gender = collection["gender"];
                 newClient.profile_pic = "default.jpg";
                 newUser.person_id = newClient.person_id;
-               
+
+                
 
                 Session["person_id"] = newUser.person_id;
 
                 db.Profiles.Add(newClient);
                 db.SaveChanges();
 
-                return RedirectToAction("Index", "Profile");
+                Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
+
+                return View("Index", theClient);
             }
             catch
             {
