@@ -58,7 +58,9 @@ namespace ClientIM.Controllers
                 db.Profiles.Add(newClient);
                 db.SaveChanges();
 
-                return RedirectToAction("Index", "Profile");
+                Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
+
+                return View("Index", theClient);
             }
             catch
             {

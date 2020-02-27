@@ -70,10 +70,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.requester)
+            @Html.DisplayNameFor(model => model.Profile.first_name), @Html.DisplayNameFor(model => model.Profile.last_name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.requested)
+            @Html.DisplayNameFor(model => model.Profile1.first_name), @Html.DisplayNameFor(model => model.Profile1.last_name)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.status)
@@ -93,29 +93,29 @@
     {
         if ((item.requester == personId || item.requested == personId) && item.approved.Equals("true"))
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.requester)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.requested)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.status)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.approved)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.read)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.timestamp)
-                </td>
-                <td>
-                    @Html.ActionLink("Remove Friend", "RemoveFriend", new { requested = item.requested, requester = item.requester })
-                </td>
-            </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.Profile.first_name), @Html.DisplayFor(model => item.Profile.last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Profile1.first_name), @Html.DisplayFor(model => item.Profile1.last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.approved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.read)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.timestamp)
+        </td>
+        <td>
+            @Html.ActionLink("Remove Friend", "RemoveFriend", new { requested = item.requested, requester = item.requester })
+        </td>
+    </tr>
         }
     }
 
