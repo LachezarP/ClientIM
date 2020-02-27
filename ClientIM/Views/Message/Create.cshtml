@@ -1,0 +1,69 @@
+﻿@model ClientIM.Models.Message
+
+@{
+    ViewBag.Title = "Create";
+    IEnumerable<ClientIM.Models.Message> messageDb = ViewBag.message;
+    var id = ViewBag.id;
+}
+
+@id
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+
+{
+    @Html.AntiForgeryToken()
+<table class="table">
+    @foreach (var item in messageDb)
+    {
+        <tr>
+            @if (item.receiver == id || item.sender == id)
+            {                
+            <td>
+                @if (item.receiver != id)
+                {
+                    @Html.DisplayFor(modelItem => item.Profile.first_name)
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.Profile1.first_name)
+                }
+                @Html.DisplayFor(modelItem => item.timestamp) |
+                @Html.DisplayFor(modelItem => item.message1)
+            </td>
+            }
+        </tr>    
+    }
+</table>
+
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+
+        <div class="form-group">          
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.message1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.message1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", new { id = ViewBag.id })
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

@@ -2,36 +2,44 @@
 
 @{
     ViewBag.Title = "Index";
+    
 }
 
-<h2>Index</h2>
+<h2>Message</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Profile.first_name)
+                Friend list
+            
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Profile1.first_name)
-        </th>
-        <th></th>
+        
     </tr>
-
+    
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Profile.first_name)
+            @if (item.requester == int.Parse(Session["person_id"].ToString())) { 
+
+                @Html.DisplayFor(modelItem => item.Profile.first_name)
+            }
+            else if (item.requested == int.Parse(Session["person_id"].ToString()))
+            {
+                @Html.DisplayFor(modelItem => item.Profile1.first_name)
+            }
+
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Profile1.first_name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @if (item.requester != int.Parse(Session["person_id"].ToString()))
+            {
+                @Html.ActionLink("Message", "Create", new { id = item.requester })
+            }            
+            else if (item.requested != int.Parse(Session["person_id"].ToString()))
+            {
+                @Html.ActionLink("Message", "Create", new { id = item.requested })
+            }
+
+
         </td>
     </tr>
 }

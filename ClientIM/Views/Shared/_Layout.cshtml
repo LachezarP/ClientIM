@@ -22,6 +22,7 @@
                 @if (Session["user_id"] != null)
                 {
                     int personId = Int32.Parse(Session["person_id"].ToString());
+                    @Html.ActionLink("Message", "Index", "Message", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("All the users", "AllUsers", "Friend", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Friend Link", "FriendLink", "Friend", new { id = personId }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "navbar-brand" })

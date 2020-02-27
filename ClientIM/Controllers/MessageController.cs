@@ -14,11 +14,7 @@ namespace ClientIM.Controllers
         {
             int id = Int32.Parse(Session["person_id"].ToString());
             IEnumerable<Models.FriendLink> friend = db.FriendLinks.Where(p => p.requester == id || p.requested == id && p.approved.Equals("true"));
-            /*var query = db.Profiles.Join(db.FriendLinks,
-                p => p.person_id,
-                c => c.requester,
-                (p, c) => new { Profile = p, FriendLinks = c }).Where(c => c.FriendLinks.approved.Equals("true"));
-            */
+            
             return View("Index", friend);
         }
 
@@ -29,20 +25,36 @@ namespace ClientIM.Controllers
         }
 
         // GET: Message/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
+            ViewBag.id = id;
+
+            int user= Int32.Parse(Session["person_id"].ToString());
+            ViewBag.message = db.Messages.Where(p => p.receiver == user || p.sender == user);
+
             return View();
         }
 
         // POST: Message/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(int id, FormCollection collection)
         {
             try
             {
                 // TODO: Add insert logic here
+                Models.Message newMessage = new Models.Message
+                {
+                    sender = int.Parse(Session["person_id"].ToString()),
+                    receiver = id,
+                    message1 = collection["message1"],
+                    timestamp = DateTime.Now.ToString(),
+                    read = "Not Read"
+                };
 
-                return RedirectToAction("Index");
+                db.Messages.Add(newMessage);
+                db.SaveChanges();
+
+                return RedirectToAction("Index", new { id = id });
             }
             catch
             {
@@ -50,48 +62,5 @@ namespace ClientIM.Controllers
             }
         }
 
-        // GET: Message/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Message/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Message/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Message/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

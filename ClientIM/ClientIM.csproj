@@ -246,6 +246,7 @@
     <Content Include="Views\Message\Index.cshtml" />
     <Content Include="Views\Friend\FriendLink.cshtml" />
     <Content Include="Views\Friend\AllUsers.cshtml" />
+    <Content Include="Views\Message\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
