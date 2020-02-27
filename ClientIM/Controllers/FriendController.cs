@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClientIM.ActionFilter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,31 +7,33 @@ using System.Web.Mvc;
 
 namespace ClientIM.Controllers
 {
+    [LoginFilter]
     public class FriendController : Controller
     {
         Models.ClientEntities db = new Models.ClientEntities();
 
-        // GET: Friend
+        [ReadFriendLinkFilter]
         public ActionResult FriendLink()
         {
             return View(db.FriendLinks);
         }
 
-        public ActionResult AllUsers()
+        public ActionResult AllUsers(string errorMessage)
         {
             int personId = Int32.Parse(Session["person_id"].ToString());
 
             Models.Profile theUser = db.Profiles.SingleOrDefault(c => c.person_id == personId);
 
-            IEnumerable<Models.FriendLink> result = db.FriendLinks.Where(p => p.requester == personId);
-            ViewBag.IEnumerable = result;
+            
+            ViewBag.error = errorMessage;
+
 
             return View(db.Profiles);
         }
 
         public ActionResult Approve(int id) {
             int personId = Int32.Parse(Session["person_id"].ToString());
-            Models.FriendLink theLink = db.FriendLinks.SingleOrDefault(c => c.requested == id);
+            Models.FriendLink theLink = db.FriendLinks.SingleOrDefault(c => c.requester == id && c.requested == personId);
 
             theLink.approved = "true";
             theLink.status = "Friends";
@@ -42,17 +45,45 @@ namespace ClientIM.Controllers
 
         public ActionResult Refuse(int id)
         {
+            int personId = Int32.Parse(Session["person_id"].ToString());
+            Models.FriendLink theLink = db.FriendLinks.SingleOrDefault(c => c.requester == id && c.requested == personId);
 
-            return View(db.FriendLinks);
+            db.FriendLinks.Remove(theLink);
+            db.SaveChanges();
+
+            return View("FriendLink", db.FriendLinks);
+        }
+
+        public ActionResult RemoveFriend(int requester, int requested)
+        {
+
+            int personId = Int32.Parse(Session["person_id"].ToString());
+
+            if (requester == personId)
+            {
+                Models.FriendLink theLinkRequester = db.FriendLinks.SingleOrDefault(c => c.requester == personId && c.requested == requested);
+
+                db.FriendLinks.Remove(theLinkRequester);
+                db.SaveChanges();
+            }
+            else
+            {
+                Models.FriendLink theLinkRequested = db.FriendLinks.SingleOrDefault(c => c.requester == requester && c.requested == personId);
+                db.FriendLinks.Remove(theLinkRequested);
+                db.SaveChanges();
+            }
+
+            return View("FriendLink", db.FriendLinks);
         }
 
         public ActionResult CreateFriendLink(int id)
         {
             int personId = Int32.Parse(Session["person_id"].ToString());
-
-            Models.FriendLink theLink = db.FriendLinks.SingleOrDefault(c => c.requester == personId && c.requested == id);
-
-            if (theLink == null) {
+            string error = "";
+            Models.FriendLink theLinkRequester = db.FriendLinks.SingleOrDefault(c => c.requester == personId && c.requested == id);
+            Models.FriendLink theLinkRequested = db.FriendLinks.SingleOrDefault(c => c.requester == id && c.requested == personId);
+            if (theLinkRequester == null && theLinkRequested == null)
+            {
 
                 Models.FriendLink newLink = new Models.FriendLink()
                 {
@@ -67,12 +98,21 @@ namespace ClientIM.Controllers
                 db.FriendLinks.Add(newLink);
                 db.SaveChanges();
 
-                ViewBag.person_id = newLink.Profile.person_id;
-
-                return RedirectToAction("AllUsers");
+                return RedirectToAction("AllUsers", new { errorMessage = error });
             }
             else
-                return RedirectToAction("AllUsers");
+            {
+                Models.Profile theProfile = db.Profiles.SingleOrDefault(p => p.person_id == id);
+                error = "You have already sent/received a friend request to/from " + theProfile.first_name + " " + theProfile.last_name;
+
+                return RedirectToAction("AllUsers",new {errorMessage = error});
+            }
+        }
+
+        public ActionResult Search(String name)
+        {
+            IEnumerable<Models.Profile> result = db.Profiles.Where(p => (p.first_name + " " + p.last_name).Contains(name));
+            return View("AllUsers", result);
         }
     }
 }

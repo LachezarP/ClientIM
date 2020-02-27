@@ -3,63 +3,72 @@
 @{
     int personId = Int32.Parse(Session["person_id"].ToString());
     ViewBag.Title = "AllUsers";
+    string error = ViewBag.error;
 }
 
 <h2>AllUsers</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.first_name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.last_name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.notes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.profile_pic)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.privacy_flag)
-        </th>
-        <th></th>
-    </tr>
+@error
 
-    @foreach (var item in Model)
-    {
+<form method="get" action="/Friend/Search ">
+    Search: <input name="name" type="text" /> <input type="submit" name="search" value="Search" />
 
-        if (item.person_id != personId)
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.first_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.last_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.notes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.profile_pic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.privacy_flag)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.first_name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.last_name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.notes)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.gender)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.profile_pic)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.privacy_flag)
-                </td>
-                <td>
-                    @Html.ActionLink("Send Friend Request", "CreateFriendLink", "Friend", new { id = item.person_id }, null)
-                </td>
-            </tr>
-        }
-    }
 
-</table>
+            if (item.person_id != personId)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.first_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.last_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.notes)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gender)
+                    </td>
+                    <td>
+                        @if (item.profile_pic != null)
+                        {
+                            <img style="width:200px; height:200px" src="@Url.Content("~/Images/" + item.profile_pic)" />
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.privacy_flag)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Send Friend Request", "CreateFriendLink", "Friend", new { id = item.person_id }, null)
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
 

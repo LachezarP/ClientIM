@@ -11,6 +11,65 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.Profile.first_name), @Html.DisplayNameFor(model => model.Profile.last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profile1.first_name), @Html.DisplayNameFor(model => model.Profile1.last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.approved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.read)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.timestamp)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.requested == personId && item.approved.Equals("Pending"))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.Profile.first_name), @Html.DisplayFor(model => item.Profile.last_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Profile1.first_name), @Html.DisplayFor(model => item.Profile1.last_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.approved)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.read)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.timestamp)
+                </td>
+                @if (item.approved != "true")
+                {
+                    <td>
+                        @Html.ActionLink("Approve", "Approve", "Friend", new { id = item.requester }, null)
+                        @Html.ActionLink("Refuse", "Refuse", new { id = item.requester })
+                    </td>
+                }
+            </tr>
+        }
+    }
+
+</table>
+
+<h3>Friends</h3>
+<table class="table">
+    <tr>
+        <th>
             @Html.DisplayNameFor(model => model.requester)
         </th>
         <th>
@@ -32,7 +91,7 @@
 
     @foreach (var item in Model)
     {
-        if (item.requested == personId)
+        if ((item.requester == personId || item.requested == personId) && item.approved.Equals("true"))
         {
             <tr>
                 <td>
@@ -53,13 +112,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.timestamp)
                 </td>
-                @if (item.approved != "true")
-                {
-                    <td>
-                        @Html.ActionLink("Approve", "Approve", "Friend", new { id = item.requested }, null)
-                        @Html.ActionLink("Refuse", "Refuse", new { id = item.requested })
-                    </td>
-                }
+                <td>
+                    @Html.ActionLink("Remove Friend", "RemoveFriend", new { requested = item.requested, requester = item.requester })
+                </td>
             </tr>
         }
     }
