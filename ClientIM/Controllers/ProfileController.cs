@@ -21,12 +21,6 @@ namespace ClientIM.Controllers
             return View(theClient);
         }
 
-        public ActionResult Search(String name)
-        {
-            IEnumerable < Models.Profile > result = db.Profiles.Where(p => (p.first_name + " " + p.last_name).Contains(name));
-            return View("Index", result);
-        }
-
         // GET: Home/Details/5
         public ActionResult Details(int id)
         {
@@ -55,6 +49,7 @@ namespace ClientIM.Controllers
                 newClient.last_name = collection["last_name"];
                 newClient.notes= collection["notes"];
                 newClient.gender = collection["gender"];
+                newClient.profile_pic = "default.jpg";
                 newUser.person_id = newClient.person_id;
                
 
