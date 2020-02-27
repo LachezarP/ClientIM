@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
 using ClientIM.ActionFilter;
+using System.IO;
 
 namespace ClientIM.Controllers
 {
@@ -51,6 +52,7 @@ namespace ClientIM.Controllers
                 newClient.notes= collection["notes"];
                 newClient.gender = collection["gender"];
                 newClient.profile_pic = "default.jpg";
+                newClient.privacy_flag = "Off";
                 newUser.person_id = newClient.person_id;
 
                 
@@ -79,19 +81,30 @@ namespace ClientIM.Controllers
 
         // POST: Home/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, FormCollection collection, HttpPostedFileBase thePicture)
         {
             try
             {
-                // TODO: Add update logic here
-                Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
-                theClient.first_name = collection["first_name"];
-                theClient.last_name = collection["last_name"];
-                theClient.notes = collection["notes"];
-                theClient.gender = collection["gender"];
+                var type = thePicture.ContentType;
+
+                string[] acceptableTypes = { "image/jpeg", "image/gif", "image/png" };
+
+                if (thePicture != null && thePicture.ContentLength > 0 && acceptableTypes.Contains(type))
+                {
+                    Guid g = Guid.NewGuid();
+                    String filename = g.ToString() + Path.GetExtension(thePicture.FileName);
+                    String path = Path.Combine(Server.MapPath("~/Images/") + filename);
+                    thePicture.SaveAs(path);
+                    // TODO: Add update logic here
+                    Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
+                    theClient.first_name = collection["first_name"];
+                    theClient.last_name = collection["last_name"];
+                    theClient.notes = collection["notes"];
+                    theClient.gender = collection["gender"];
+                    theClient.profile_pic = filename;
 
                 db.SaveChanges();
-
+                }
                 return RedirectToAction("Index");
             }
             catch
@@ -129,6 +142,26 @@ namespace ClientIM.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult privacyOff(int id)
+        {
+            Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
+
+            theClient.privacy_flag = "Off";
+            db.SaveChanges();
+
+            return View("Index",theClient);
+        }
+
+        public ActionResult privacyOn(int id)
+        {
+            Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
+
+            theClient.privacy_flag = "On";
+            db.SaveChanges();
+
+            return View("Index",theClient);
         }
     }
 }
