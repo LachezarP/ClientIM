@@ -92,6 +92,7 @@ namespace ClientIM.Controllers
             string error = "";
             Models.FriendLink theLinkRequester = db.FriendLinks.SingleOrDefault(c => c.requester == personId && c.requested == id);
             Models.FriendLink theLinkRequested = db.FriendLinks.SingleOrDefault(c => c.requester == id && c.requested == personId);
+
             if (theLinkRequester == null && theLinkRequested == null)
             {
 

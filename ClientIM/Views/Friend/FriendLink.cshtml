@@ -32,7 +32,7 @@
 
     @foreach (var item in Model)
     {
-        if ((item.requester == personId || item.requested == personId) && item.approved.Equals("Pending"))
+        if (item.requested == personId && item.approved.Equals("Pending"))
         {
             <tr>
                 <td>
@@ -53,7 +53,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.timestamp)
                 </td>
-                @if (item.approved != "true" && item.requester != personId)
+                @if (item.approved != "true" && item.requester != personId && item.Profile1.privacy_flag == "On")
                 {
                     <td>
                         @Html.ActionLink("Approve", "Approve", "Friend", new { id = item.requester }, null)
