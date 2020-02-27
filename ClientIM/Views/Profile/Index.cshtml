@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.profile_pic)
         </dt>
         <dd>
-            <img style="width:200px; height:200px" src="@Url.Content("~/Images/" + Model.profile_pic)" />
+            <img style="width:75px; height:75px" src="@Url.Content("~/Images/" + Model.profile_pic)" />
         </dd>
         
         <dt>
@@ -62,5 +62,7 @@
 </div>
 <p>
     @Html.ActionLink("Edit Profile", "Edit", new { id = Model.person_id }) |
-    @Html.ActionLink("Add a new picture", "Create", "Picture", new { id = Model.person_id }, null)
+    @Html.ActionLink("Add a new picture", "Create", "Picture", new { id = Model.person_id }, null) |
+    @Html.ActionLink("View Pictures", "Index", "Picture", new { id = Model.person_id }, null) |
+    @Html.ActionLink("View Feed", "Index", "Feed", new { id = Model.person_id }, null)
 </p>
