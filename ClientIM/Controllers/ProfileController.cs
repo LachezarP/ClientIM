@@ -56,6 +56,7 @@ namespace ClientIM.Controllers
                 newClient.notes= collection["notes"];
                 newClient.gender = collection["gender"];
                 newUser.person_id = newClient.person_id;
+               
 
                 Session["person_id"] = newUser.person_id;
 
