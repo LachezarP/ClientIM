@@ -24,6 +24,7 @@ namespace ClientIM.Controllers
         {
             Session["friend_request"] = 0;
             Session["new_message"] = 0;
+            Session["Address_person_id"] = 0;
             string username = collection["username"];
             Models.User theUser = db.Users.SingleOrDefault(u => u.username.Equals(username));
             if (theUser != null && 

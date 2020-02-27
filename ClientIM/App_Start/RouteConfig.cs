@@ -18,10 +18,11 @@ namespace ClientIM
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
             routes.MapRoute(
-                name: "FriendLink",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Friend", action = "FriendLink", id = UrlParameter.Optional }
+                name: "Profile",
+                url: "Profile/{action}/{id}",
+                defaults: new { controller = "Profile", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
