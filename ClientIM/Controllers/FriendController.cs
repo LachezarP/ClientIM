@@ -93,19 +93,34 @@ namespace ClientIM.Controllers
             Models.FriendLink theLinkRequester = db.FriendLinks.SingleOrDefault(c => c.requester == personId && c.requested == id);
             Models.FriendLink theLinkRequested = db.FriendLinks.SingleOrDefault(c => c.requester == id && c.requested == personId);
 
+            Models.Profile theRequested = db.Profiles.SingleOrDefault(c => c.person_id == id);
+
+            Models.FriendLink newLink;
             if (theLinkRequester == null && theLinkRequested == null)
             {
-
-                Models.FriendLink newLink = new Models.FriendLink()
+                if (theRequested.privacy_flag.Equals("On"))
                 {
-                    requester = personId,
-                    requested = id,
-                    approved = "Pending",
-                    status = "Strangers",
-                    read = "Not read",
-                    timestamp = DateTime.Now.ToString()
-                };
-
+                    newLink = new Models.FriendLink()
+                    {
+                        requester = personId,
+                        requested = id,
+                        approved = "Pending",
+                        status = "Strangers",
+                        read = "Not read",
+                        timestamp = DateTime.Now.ToString()
+                    };
+                }
+                else {
+                    newLink = new Models.FriendLink()
+                    {
+                        requester = personId,
+                        requested = id,
+                        approved = "true",
+                        status = "Friends",
+                        read = "Not read",
+                        timestamp = DateTime.Now.ToString()
+                    };
+                }
                 db.FriendLinks.Add(newLink);
                 db.SaveChanges();
 
