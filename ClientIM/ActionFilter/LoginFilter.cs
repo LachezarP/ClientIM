@@ -7,8 +7,9 @@ using System.Web.Mvc;
 namespace ClientIM.ActionFilter
 {
     public class LoginFilter : ActionFilterAttribute
-    {
-        public override void OnActionExecuted(ActionExecutedContext filterContext)
+    { 
+
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             if (filterContext.HttpContext.Session["user_id"] == null)
             {
