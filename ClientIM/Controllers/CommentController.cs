@@ -17,7 +17,25 @@ namespace ClientIM.Controllers
         {
             ViewBag.id = id;
 
+            int personId = Int32.Parse(Session["person_id"].ToString());
+
             Models.Picture thePicutre = db.Pictures.SingleOrDefault(c => c.picture_id == id);
+                int counter = 0;
+
+                int counterCommentLike = Int32.Parse(Session["new_CommentLikes"].ToString());
+
+                IEnumerable<Models.Comment> yourComment = db.Comments.Where(c => c.person_id == personId);
+                    foreach (Models.Comment_like ML in db.Comment_like.ToList())
+                    {
+                        if (yourComment.Contains(db.Comments.SingleOrDefault(c => c.comment_id == ML.comment_id)) && ML.read.Equals("Not read"))
+                        {
+                            counter++;
+                            ML.read = "Read";
+                        }
+                    }
+                db.SaveChanges();
+                counterCommentLike -= counter;
+                Session["new_CommentLikes"] = counterCommentLike;
 
             return View(thePicutre);
         }
