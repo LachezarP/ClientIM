@@ -35,8 +35,7 @@
     <div class="form-group">
         @Html.Label("Validation Code", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.Editor("Validation", new { htmlArrtributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.password_hash, "", new { @class = "text-danger" })
+            @Html.Editor("Validation", new { htmlArrtributes = new { @class = "form-control" } })            
         </div>
     </div>
 

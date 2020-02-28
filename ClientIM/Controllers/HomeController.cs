@@ -69,6 +69,36 @@ namespace ClientIM.Controllers
             }
         }
 
+        public ActionResult Edit()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Edit(FormCollection collection)
+        {
+            try
+            {
+                int currentUser = int.Parse(Session["user_id"].ToString());
+                Models.User theUser = db.Users.SingleOrDefault(p => p.user_id == currentUser);
+                
+                // TODO: Add update logic here
+
+                theUser.password_hash = Crypto.HashPassword(collection["password_hash"]);
+
+
+                db.SaveChanges();
+
+                return RedirectToAction("AllUsers", "Friend");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+
         // GET: Home/Details/5
         public ActionResult Logout()
         {

@@ -53,7 +53,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.timestamp)
                 </td>
-                @if (item.approved != "true" && item.requester != personId && item.Profile1.privacy_flag.Equals("On"))
+                @if (item.approved != "true" && item.requester != personId && item.Profile.privacy_flag.Equals("On"))
                 {
                     <td>
                         @Html.ActionLink("Approve", "Approve", "Friend", new { id = item.requester }, null)

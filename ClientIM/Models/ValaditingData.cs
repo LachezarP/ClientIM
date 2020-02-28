@@ -50,6 +50,7 @@ namespace ClientIM.Models
         public string username;
 
         [Display(Name = "Password")]
+        [Required(ErrorMessage = "Please enter a password")]
         public string password_hash;
     }
 

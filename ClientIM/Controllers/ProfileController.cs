@@ -29,6 +29,26 @@ namespace ClientIM.Controllers
             return View(theClient);
         }
 
+        public ActionResult DetailsPrivacy(int id)
+        {
+            int personId = Int32.Parse(Session["person_id"].ToString());
+
+            Models.FriendLink theLinkRequester = db.FriendLinks.SingleOrDefault(c => c.requester == personId && c.requested == id && c.approved == "true");
+            Models.FriendLink theLinkRequested = db.FriendLinks.SingleOrDefault(c => c.requester == id && c.requested == personId && c.approved == "true");
+
+            if (theLinkRequester != null || theLinkRequested != null)
+            {
+                Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
+
+                return View("Details",theClient);
+            }
+
+            Models.Profile theProfile = db.Profiles.SingleOrDefault(p => p.person_id == id);
+            string error = theProfile.first_name + " " + theProfile.last_name + " is a private user and hasn't accepted your request.";
+
+            return RedirectToAction("AllUsers", "Friend", new { errorMessage = error });
+        }
+
         // GET: Home/Create
         public ActionResult Create()
         {
