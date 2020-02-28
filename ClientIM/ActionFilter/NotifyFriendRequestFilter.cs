@@ -55,6 +55,22 @@ namespace ClientIM.ActionFilter
                     }
                 }
             }
+
+            int counterCommentLike = Int32.Parse(filterContext.HttpContext.Session["new_CommentLikes"].ToString());
+
+            IEnumerable<Models.Comment> yourComment = db.Comments.Where(c => c.person_id == personId);
+
+            if (counterCommentLike == 0)
+            {
+                foreach (Models.Comment_like ML in db.Comment_like.ToList())
+                {
+                    if (yourComment.Contains(db.Comments.SingleOrDefault(c => c.comment_id == ML.comment_id)) && ML.read.Equals("Not read"))
+                    {
+                        counterCommentLike++;
+                        filterContext.HttpContext.Session["new_CommentLikes"] = counterCommentLike;
+                    }
+                }
+            }
         }
     }
 }
