@@ -1,0 +1,15 @@
+﻿@model ClientIM.Models.Picture
+
+@{
+    ViewBag.Title = "Comment Index";
+}
+
+<h2>@ViewBag.Titlee</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { id = Model.picture_id })
+</p>
+
+@Html.Partial("CommentList", Model.Comments)
+
+@Html.ActionLink("Back to List", "Index", "Feed")

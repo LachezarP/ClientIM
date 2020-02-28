@@ -270,6 +270,9 @@
     <Content Include="Views\Friend\AllUsers.cshtml" />
     <Content Include="Views\Message\Create.cshtml" />
     <Content Include="Views\Feed\Index.cshtml" />
+    <Content Include="Views\Comment\Index.cshtml" />
+    <Content Include="Views\Comment\CommentList.cshtml" />
+    <Content Include="Views\Comment\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -277,9 +280,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Comment\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ClientIM.Models.Comment>
+
+@{ 
+    int id = Int32.Parse(Session["person_id"].ToString());
+}
+
+<table class="table">
+    
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profile.first_name) 
+            @Html.DisplayFor(modelItem => item.Profile.last_name) |
+            @Html.DisplayFor(modelItem => item.read) |
+            @Html.DisplayFor(modelItem => item.timestamp) : 
+            @Html.DisplayFor(modelItem => item.comment1)
+
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.comment_id }) |
+            @Html.ActionLink("Like", "Details", new { id = item.comment_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.comment_id })
+        </td>
+    </tr>
+}
+
+</table>

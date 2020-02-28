@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<ClientIM.Models.Picture>
 
 @{
+    int id = Int32.Parse(Session["person_id"].ToString());
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
 <table class="table">
     <tr>
@@ -29,7 +30,7 @@
     @foreach (var item in Model)
     {
 
-        if (item.Profile.privacy_flag != "On")
+        if (item.Profile.privacy_flag != "On" || item.person_id == id)
         {
             <tr>
                 <td>
@@ -48,8 +49,8 @@
                     @Html.DisplayFor(modelItem => item.Profile.first_name)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.picture_id }) |
-                    @Html.ActionLink("Index", "Comment", new { id = item.picture_id }) |
+                    @Html.ActionLink("Like", "Edit", new { id = item.picture_id }) |
+                    @Html.ActionLink("Comment", "Index", "Comment", new { id = item.picture_id }, null) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.picture_id })
                 </td>
             </tr>

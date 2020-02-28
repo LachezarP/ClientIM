@@ -49,10 +49,17 @@
                         @Html.DisplayFor(modelItem => item.last_name)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.notes)
+                        @if (item.privacy_flag != "On")
+                        {
+                            @Html.DisplayFor(modelItem => item.notes)
+                        }
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.gender)
+                        @if (item.privacy_flag != "On")
+                        {
+                            @Html.DisplayFor(modelItem => item.gender)
+
+                        }
                     </td>
                     <td>
                         @if (item.profile_pic != null)
