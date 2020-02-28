@@ -176,7 +176,6 @@
     <Compile Include="Controllers\Base32.cs" />
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\FeedController.cs" />
     <Compile Include="Controllers\FriendController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -269,7 +268,6 @@
     <Content Include="Views\Friend\FriendLink.cshtml" />
     <Content Include="Views\Friend\AllUsers.cshtml" />
     <Content Include="Views\Message\Create.cshtml" />
-    <Content Include="Views\Feed\Index.cshtml" />
     <Content Include="Views\Comment\Index.cshtml" />
     <Content Include="Views\Comment\CommentList.cshtml" />
     <Content Include="Views\Comment\Create.cshtml" />
