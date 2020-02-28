@@ -39,6 +39,22 @@ namespace ClientIM.ActionFilter
                     }
                 }
             }
+
+            int counterLike = Int32.Parse(filterContext.HttpContext.Session["new_Likes"].ToString());
+
+            IEnumerable<Models.Picture> yourPics = db.Pictures.Where(c => c.person_id == personId);
+
+            if (counterLike == 0)
+            {
+                foreach (Models.Like ML in db.Likes.ToList())
+                {
+                    if (yourPics.Contains(db.Pictures.SingleOrDefault(c => c.picture_id == ML.picture_id)) && ML.read.Equals("Not read"))
+                    {
+                        counterLike++;
+                        filterContext.HttpContext.Session["new_Likes"] = counterLike;
+                    }
+                }
+            }
         }
     }
 }

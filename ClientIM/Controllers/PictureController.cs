@@ -19,6 +19,29 @@ namespace ClientIM.Controllers
 
             Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
 
+            int personId = Int32.Parse(Session["person_id"].ToString());
+
+            if (id == personId)
+            {
+                int counter = 0;
+
+                int counterLike = Int32.Parse(Session["new_Likes"].ToString());
+
+                IEnumerable<Models.Picture> yourPics = db.Pictures.Where(c => c.person_id == personId);
+
+                foreach (Models.Like ML in db.Likes.ToList())
+                {
+                    if (yourPics.Contains(db.Pictures.SingleOrDefault(c => c.picture_id == ML.picture_id)))
+                    {
+                        if (ML.read == "Not read")
+                            counter++;
+                        ML.read = "Read";
+                    }
+                }
+                db.SaveChanges();
+                counterLike -= counter;
+                Session["new_Likes"] = counterLike;
+            }
             return View(theClient);
         }
 

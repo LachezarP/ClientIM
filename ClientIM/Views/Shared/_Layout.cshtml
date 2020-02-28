@@ -24,7 +24,9 @@
                     int personId = Int32.Parse(Session["person_id"].ToString());
                     int counterFriend = Int32.Parse(Session["friend_request"].ToString());
                     int counterMessage = Int32.Parse(Session["new_message"].ToString());
-                    @Html.ActionLink("Social Media Application", "AllUsers", "Friend", new { area = "" }, new { @class = "navbar-brand" })
+                    int counterLike = Int32.Parse(Session["new_Likes"].ToString());
+                    int counterCommentLike = Int32.Parse(Session["new_CommentLikes"].ToString());
+                    @Html.ActionLink("Social Media Application (Likes: " + counterLike + ")(Comments: "+ counterCommentLike +")", "AllUsers", "Friend", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Message(" + counterMessage + ")", "Index", "Message", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Friend Requests(" + counterFriend + ")", "FriendLink", "Friend", new { id = personId }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Profile", "Index", "Profile", new { area = "" }, new { @class = "navbar-brand" })                   

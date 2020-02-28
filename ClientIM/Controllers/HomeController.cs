@@ -1,4 +1,5 @@
-﻿using QRCoder;
+﻿using ClientIM.ActionFilter;
+using QRCoder;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,6 +11,7 @@ using TotpAuth;
 
 namespace ClientIM.Controllers
 {
+    
     public class HomeController : Controller
     {
         Models.ClientEntities db = new Models.ClientEntities();
@@ -25,6 +27,8 @@ namespace ClientIM.Controllers
             Session["friend_request"] = 0;
             Session["new_message"] = 0;
             Session["Address_person_id"] = 0;
+            Session["new_CommentLikes"] = 0;
+            Session["new_Likes"] = 0;
             string username = collection["username"];
             Models.User theUser = db.Users.SingleOrDefault(u => u.username.Equals(username));
             if (theUser != null && 

@@ -19,6 +19,7 @@ namespace ClientIM.Controllers
             return View(db.FriendLinks);
         }
 
+        [NotifyFriendRequestFilter]
         public ActionResult AllUsers(string errorMessage)
         {
             int personId = Int32.Parse(Session["person_id"].ToString());
