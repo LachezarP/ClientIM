@@ -37,7 +37,7 @@
           <Property Name="person_id" Type="int" Nullable="false" />
           <Property Name="timestamp" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="read" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="comment_like_id" Type="int" Nullable="false" />
+          <Property Name="comment_like_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="Contact">
           <Key>
@@ -76,7 +76,7 @@
           <Property Name="person_id" Type="int" Nullable="false" />
           <Property Name="timestamp" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="read" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="like_id" Type="int" Nullable="false" />
+          <Property Name="like_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="Message">
           <Key>
@@ -384,7 +384,7 @@
           <Property Name="person_id" Type="Int32" Nullable="false" />
           <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="read" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="comment_like_id" Type="Int32" Nullable="false" />
+          <Property Name="comment_like_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Profile" Relationship="Self.FK_Comment_like_Profile" FromRole="Comment_like" ToRole="Profile" />
         </EntityType>
         <EntityType Name="Contact">
@@ -428,7 +428,7 @@
           <Property Name="person_id" Type="Int32" Nullable="false" />
           <Property Name="timestamp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="read" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="like_id" Type="Int32" Nullable="false" />
+          <Property Name="like_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Profile" Relationship="Self.FK_Like_Profile" FromRole="Like" ToRole="Profile" />
         </EntityType>
         <EntityType Name="Message">

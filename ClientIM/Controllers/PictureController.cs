@@ -163,12 +163,14 @@ namespace ClientIM.Controllers
                 read = "Not read"
             };
 
+            Models.Picture thePerson = db.Pictures.SingleOrDefault(c => c.picture_id == newLike.picture_id);
+
             db.Likes.Add(newLike);
             db.SaveChanges();
 
             ViewBag.liked = db.Likes.SingleOrDefault(c => c.person_id == personId && c.picture_id == id);
 
-            return RedirectToAction("Index", new { id = personId });
+            return RedirectToAction("Index", new { id =  thePerson.person_id});
         }
 
         public ActionResult UnlikePic(int id)
@@ -177,10 +179,12 @@ namespace ClientIM.Controllers
 
             Models.Like theLike = db.Likes.SingleOrDefault(c => c.person_id == personId && c.picture_id == id);
 
+            Models.Picture thePerson = db.Pictures.SingleOrDefault(c => c.picture_id == theLike.picture_id);
+
             db.Likes.Remove(theLike);
             db.SaveChanges();
 
-            return RedirectToAction("Index", new { id = personId });
+            return RedirectToAction("Index", new { id = thePerson.person_id });
         }
     }
 }
