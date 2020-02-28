@@ -83,23 +83,37 @@ namespace ClientIM.Controllers
         public ActionResult Edit(FormCollection collection)
         {
             try
-            {
-                int currentUser = int.Parse(Session["user_id"].ToString());
-                Models.User theUser = db.Users.SingleOrDefault(p => p.user_id == currentUser);
-                
-                // TODO: Add update logic here
+            {   if (Session["person_id"] != null)
+                {
+                    int currentUser = int.Parse(Session["user_id"].ToString());
+                    Models.User theUser = db.Users.SingleOrDefault(p => p.user_id == currentUser);
 
-                theUser.password_hash = Crypto.HashPassword(collection["password_hash"]);
+                    // TODO: Add update logic here
+                    if (collection["Confirm"].Equals(collection["password_hash"]))
+                    {
+                        theUser.password_hash = Crypto.HashPassword(collection["password_hash"]);
 
+                        db.SaveChanges();
 
-                db.SaveChanges();
+                        return RedirectToAction("AllUsers", "Friend");
+                    }
+                    else
+                    {
+                        ViewBag.error = "The passwords does not match.";
+                        return View();
+                    }
 
-                return RedirectToAction("AllUsers", "Friend");
+                }
+                else
+                {
+                    return RedirectToAction("Index");
+                }
             }
             catch
             {
                 return View();
             }
+
         }
 
 
