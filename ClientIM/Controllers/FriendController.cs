@@ -25,7 +25,6 @@ namespace ClientIM.Controllers
 
             Models.Profile theUser = db.Profiles.SingleOrDefault(c => c.person_id == personId);
 
-            
             ViewBag.error = errorMessage;
 
 
@@ -92,6 +91,8 @@ namespace ClientIM.Controllers
             string error = "";
             Models.FriendLink theLinkRequester = db.FriendLinks.SingleOrDefault(c => c.requester == personId && c.requested == id);
             Models.FriendLink theLinkRequested = db.FriendLinks.SingleOrDefault(c => c.requester == id && c.requested == personId);
+
+
 
             Models.Profile theRequested = db.Profiles.SingleOrDefault(c => c.person_id == id);
 
