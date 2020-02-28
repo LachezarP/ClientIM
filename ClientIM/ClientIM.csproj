@@ -132,11 +132,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Images\default.jpg" />
     <EntityDeploy Include="Models\Profile.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Profile.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Images\default.jpg" />
     <Content Include="Models\Profile.edmx.diagram">
       <DependentUpon>Profile.edmx</DependentUpon>
     </Content>
@@ -275,7 +275,7 @@
     <Content Include="Views\Comment\Create.cshtml" />
     <Content Include="Views\Comment\Delete.cshtml" />
     <Content Include="Views\Comment\Edit.cshtml" />
-    <Content Include="Views\Home\Edit.cshtml"/>
+    <Content Include="Views\Home\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

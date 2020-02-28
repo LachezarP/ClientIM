@@ -18,6 +18,7 @@ namespace ClientIM.Models
         public int person_id { get; set; }
         public string timestamp { get; set; }
         public string read { get; set; }
+        public int comment_like_id { get; set; }
     
         public virtual Profile Profile { get; set; }
     }

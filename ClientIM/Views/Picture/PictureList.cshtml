@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<ClientIM.Models.Picture>
 
+@{ 
+    int personId = Int32.Parse(Session["person_id"].ToString());
+}
+
 <table class="table">
     <tr>
         <th>
@@ -39,9 +43,15 @@
                 @Html.ActionLink("Delete", "Delete", new { id = item.picture_id })
             </td>
           }
-        <td>
-            @Html.ActionLink("Comment", "Index", "Comment", new { id = item.picture_id}, null)
-        </td>
+            <td>
+                @if (item.Profile.Likes.SingleOrDefault(c => c.person_id == personId && c.picture_id == item.picture_id) == ViewBag.liked && ViewBag.liked != null) {
+                    @Html.ActionLink("Like", "LikePic", "Picture", new { id = item.picture_id }, null)
+                }
+                else {
+                    @Html.ActionLink("Unlike", "UnlikePic", "Picture", new { id = item.picture_id }, null) 
+                }
+                | @Html.ActionLink("Comment", "Index", "Comment", new { id = item.picture_id }, null)
+            </td>
         </tr>
 }
 

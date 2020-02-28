@@ -152,6 +152,35 @@ namespace ClientIM.Controllers
             }
         }
 
+        public ActionResult LikePic(int id) {
+            int personId = Int32.Parse(Session["person_id"].ToString());
 
+            Models.Like newLike = new Models.Like()
+            {
+                person_id = personId,
+                picture_id = id,
+                timestamp = DateTime.Now.ToString(),
+                read = "Not read"
+            };
+
+            db.Likes.Add(newLike);
+            db.SaveChanges();
+
+            ViewBag.liked = db.Likes.SingleOrDefault(c => c.person_id == personId && c.picture_id == id);
+
+            return RedirectToAction("Index", new { id = personId });
+        }
+
+        public ActionResult UnlikePic(int id)
+        {
+            int personId = Int32.Parse(Session["person_id"].ToString());
+
+            Models.Like theLike = db.Likes.SingleOrDefault(c => c.person_id == personId && c.picture_id == id);
+
+            db.Likes.Remove(theLike);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", new { id = personId });
+        }
     }
 }
