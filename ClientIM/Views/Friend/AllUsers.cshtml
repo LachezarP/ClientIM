@@ -71,6 +71,7 @@
                         @Html.DisplayFor(modelItem => item.privacy_flag)
                     </td>
                     <td>
+                        @Html.ActionLink("Profile", "Details", "Profile", new { id = item.person_id}, null)
                         @Html.ActionLink("Send Friend Request", "CreateFriendLink", "Friend", new { id = item.person_id }, null)
                     </td>
                 </tr>

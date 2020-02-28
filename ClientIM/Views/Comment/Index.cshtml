@@ -12,4 +12,4 @@
 
 @Html.Partial("CommentList", Model.Comments)
 
-@Html.ActionLink("Back to List", "Index", "Feed")
+@Html.ActionLink("Back to List", "Index", "Picture", new { id = Model.person_id}, null)

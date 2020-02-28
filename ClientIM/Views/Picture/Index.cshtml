@@ -8,11 +8,20 @@
     @Html.DisplayFor(model => Model.first_name)
     @Html.DisplayFor(model => Model.last_name)
 </h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create", new { id = Model.person_id })
-</p>
+@if (Model.person_id == Int32.Parse(Session["person_id"].ToString()))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create", new { id = Model.person_id })
+    </p>
+}
 
 @Html.Partial("PictureList", Model.Pictures)
+@if (Model.person_id != Int32.Parse(Session["person_id"].ToString()))
+{
+    @Html.ActionLink("Back to List", "Details", "Profile", new { id = Model.person_id }, null)
+}
+else
+{
+    @Html.ActionLink("Back to List", "Index", "Profile", new { id = Model.person_id }, null)
+}
 
-@Html.ActionLink("Back to List", "Index", "Profile", new { id = Model.person_id }, null)

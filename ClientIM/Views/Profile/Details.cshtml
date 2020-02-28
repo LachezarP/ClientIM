@@ -50,12 +50,12 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.profile_pic)
+            <img style="width:50px; height:50px" src="@Url.Content("~/Images/" + Model.profile_pic)" />
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.person_id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Pictures", "Index", "Picture", new { id = Model.person_id}, null) |
+    @Html.ActionLink("Back to List", "AllUsers", "Friend")
 </p>
