@@ -6,9 +6,11 @@
     string error = ViewBag.error;
 }
 
-<h2>AllUsers</h2>
+<h2>All Users</h2>
+<h3 style="color:red">
+    @error
+</h3>
 
-@error
 
 <form method="get" action="/Friend/Search ">
     Search: <input name="name" type="text" /> <input type="submit" name="search" value="Search" />

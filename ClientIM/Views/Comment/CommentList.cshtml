@@ -20,15 +20,18 @@
 
         </td>
         <td>
-            @if (db.Comment_like.SingleOrDefault(c => c.person_id == id && c.comment_id == item.comment_id) == null)
+            @if (item.person_id == id)
             {
-                @Html.ActionLink("Like", "LikeComment", "Comment", new { id = item.comment_id }, null)
+                @if (db.Comment_like.SingleOrDefault(c => c.person_id == id && c.comment_id == item.comment_id) == null)
+                {
+                    @Html.ActionLink("Like", "LikeComment", "Comment", new { id = item.comment_id }, null)
+                }
+                else
+                {
+                    @Html.ActionLink("Unlike", "UnlikeComment", "Comment", new { id = item.comment_id }, null)
+                }
             }
-            else
-            {
-                @Html.ActionLink("Unlike", "UnlikeComment", "Comment", new { id = item.comment_id }, null)
-            }
-        </td>
+            </td>
         @if (item.person_id == Int32.Parse(Session["person_id"].ToString()))
         {
             <td>
