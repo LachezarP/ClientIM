@@ -273,6 +273,7 @@
     <Content Include="Views\Comment\Index.cshtml" />
     <Content Include="Views\Comment\CommentList.cshtml" />
     <Content Include="Views\Comment\Create.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
