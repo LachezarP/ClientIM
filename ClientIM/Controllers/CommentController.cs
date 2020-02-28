@@ -57,7 +57,9 @@ namespace ClientIM.Controllers
         // GET: Comment/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Models.Comment theComment = db.Comments.SingleOrDefault(c => c.comment_id == id);
+
+            return View(theComment);
         }
 
         // POST: Comment/Edit/5
@@ -67,8 +69,12 @@ namespace ClientIM.Controllers
             try
             {
                 // TODO: Add update logic here
+                Models.Comment theComment = db.Comments.SingleOrDefault(c => c.comment_id == id);
 
-                return RedirectToAction("Index");
+                theComment.comment1 = collection["comment1"];
+                db.SaveChanges();
+
+                return RedirectToAction("Index","Comment", new { id = theComment.picture_id});
             }
             catch
             {
@@ -79,7 +85,9 @@ namespace ClientIM.Controllers
         // GET: Comment/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Models.Comment theComment = db.Comments.SingleOrDefault(c => c.comment_id == id);
+
+            return View(theComment);
         }
 
         // POST: Comment/Delete/5
@@ -89,8 +97,12 @@ namespace ClientIM.Controllers
             try
             {
                 // TODO: Add delete logic here
+                Models.Comment theComment = db.Comments.SingleOrDefault(c => c.comment_id == id);
 
-                return RedirectToAction("Index");
+                db.Comments.Remove(theComment);
+                db.SaveChanges();
+
+                return RedirectToAction("Index", "Comment", new { id = theComment.picture_id });
             }
             catch
             {
