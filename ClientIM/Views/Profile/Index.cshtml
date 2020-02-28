@@ -63,7 +63,6 @@
 </div>
 <p>
     @Html.ActionLink("Edit Profile", "Edit", new { id = Model.person_id }) |
-    @Html.ActionLink("Add a new picture", "Create", "Picture", new { id = Model.person_id }, null) |
     @Html.ActionLink("Address", "Index", "Address", new { id = Model.person_id }, null) |
     @Html.ActionLink("Pictures", "Index", "Picture", new { id = Model.person_id}, null) |
     @if (Model.privacy_flag == null)

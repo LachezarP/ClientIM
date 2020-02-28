@@ -70,7 +70,7 @@ namespace ClientIM.Controllers
                     db.SaveChanges();
                 }
 
-                return RedirectToAction("Index","Profile", new { id = id });
+                return RedirectToAction("Index", new { id = id });
             }
             catch
             {
