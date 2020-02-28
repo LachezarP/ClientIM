@@ -74,7 +74,7 @@
 
         @Html.ActionLink("Turn Privacy Flag Off", "PrivacyOff", "Profile", new { id = Model.person_id }, null)
     }
-    else if (Model.privacy_flag == "On")
+    else if (Model.privacy_flag.Equals("On"))
     {
         @Html.ActionLink("Turn Privacy Flag Off", "PrivacyOff", "Profile", new { id = Model.person_id }, null)
     }

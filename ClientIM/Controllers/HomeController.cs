@@ -40,7 +40,7 @@ namespace ClientIM.Controllers
                         if (theUser.person_id != null)
                         {
                             Session["person_id"] = theUser.person_id;
-                            return RedirectToAction("Index", "Profile");
+                            return RedirectToAction("AllUsers", "Friend");
                         }
                         else
                         {
@@ -54,7 +54,7 @@ namespace ClientIM.Controllers
                     if (theUser.person_id != null)
                     {
                         Session["person_id"] = theUser.person_id;
-                        return RedirectToAction("Index", "Profile");
+                        return RedirectToAction("AllUsers", "Friend");
                     }
                     else
                         return RedirectToAction("Create", "Profile");
