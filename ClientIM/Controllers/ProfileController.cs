@@ -45,7 +45,7 @@ namespace ClientIM.Controllers
                 // TODO: Add insert logic here          
                 int id = Int32.Parse(Session["user_id"].ToString());
                 Models.Profile newClient = new Models.Profile();
-                Models.User newUser = db.Users.SingleOrDefault(p => p.user_id == id);
+                Models.User theUser = db.Users.SingleOrDefault(p => p.user_id == id);
 
                 newClient.first_name = collection["first_name"];
                 newClient.last_name = collection["last_name"];
@@ -53,18 +53,16 @@ namespace ClientIM.Controllers
                 newClient.gender = collection["gender"];
                 newClient.profile_pic = "default.jpg";
                 newClient.privacy_flag = "Off";
-                newUser.person_id = newClient.person_id;
+                theUser.person_id = newClient.person_id;
 
                 
 
-                Session["person_id"] = newUser.person_id;
+                Session["person_id"] = newClient.person_id;
 
                 db.Profiles.Add(newClient);
                 db.SaveChanges();
 
-                Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == id);
-
-                return View("Index", theClient);
+                return View("Index", newClient);
             }
             catch
             {
