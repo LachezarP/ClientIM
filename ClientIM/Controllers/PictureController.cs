@@ -138,9 +138,8 @@ namespace ClientIM.Controllers
                 // TODO: Add delete logic here
                 Models.Picture thePicture = db.Pictures.SingleOrDefault(c => c.picture_id == id);
 
-                Models.Profile theClient = db.Profiles.SingleOrDefault(c => c.person_id == thePicture.person_id);
-
-                theClient.profile_pic = null;
+                var filePath = Server.MapPath("~/Images/" + thePicture.path);
+                System.IO.File.Delete(filePath);
 
                 db.Pictures.Remove(thePicture);
                 db.SaveChanges();
