@@ -2,6 +2,8 @@
 
 @{ 
     int id = Int32.Parse(Session["person_id"].ToString());
+
+    ClientIM.Models.ClientEntities db = new ClientIM.Models.ClientEntities();
 }
 
 <table class="table">
@@ -18,7 +20,14 @@
 
         </td>
         <td>
-            @Html.ActionLink("Like", "Details", new { id = item.comment_id }) |
+            @if (db.Comment_like.SingleOrDefault(c => c.person_id == id && c.comment_id == item.comment_id) == null)
+            {
+                @Html.ActionLink("Like", "LikeComment", "Comment", new { id = item.comment_id }, null)
+            }
+            else
+            {
+                @Html.ActionLink("Unlike", "UnlikeComment", "Comment", new { id = item.comment_id }, null)
+            }
         </td>
         @if (item.person_id == Int32.Parse(Session["person_id"].ToString()))
         {

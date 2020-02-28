@@ -2,6 +2,8 @@
 
 @{ 
     int personId = Int32.Parse(Session["person_id"].ToString());
+
+    ClientIM.Models.ClientEntities db = new ClientIM.Models.ClientEntities();
 }
 
 <table class="table">
@@ -44,11 +46,11 @@
             </td>
           }
             <td>
-                @if (1 != 1)
+                @if (db.Likes.SingleOrDefault(c => c.person_id == personId && c.picture_id == item.picture_id) == null)
                 {
                     @Html.ActionLink("Like", "LikePic", "Picture", new { id = item.picture_id }, null)
                 }
-                else if (1 != 1)
+                else
                 {
                     @Html.ActionLink("Unlike", "UnlikePic", "Picture", new { id = item.picture_id }, null)
                 }

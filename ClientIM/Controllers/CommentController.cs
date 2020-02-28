@@ -109,5 +109,39 @@ namespace ClientIM.Controllers
                 return View();
             }
         }
+
+        public ActionResult LikeComment(int id)
+        {
+            int personId = Int32.Parse(Session["person_id"].ToString());
+
+            Models.Comment_like newCommentLike = new Models.Comment_like()
+            {
+                person_id = personId,
+                comment_id = id,
+                timestamp = DateTime.Now.ToString(),
+                read = "Not read"
+            };
+
+            Models.Comment thePerson = db.Comments.SingleOrDefault(c => c.comment_id == newCommentLike.comment_id);
+
+            db.Comment_like.Add(newCommentLike);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", new { id = thePerson.picture_id });
+        }
+
+        public ActionResult UnlikeComment(int id)
+        {
+            int personId = Int32.Parse(Session["person_id"].ToString());
+
+            Models.Comment_like theCommentLike = db.Comment_like.SingleOrDefault(c => c.person_id == personId && c.comment_id == id);
+
+            Models.Comment thePerson = db.Comments.SingleOrDefault(c => c.comment_id == theCommentLike.comment_id);
+
+            db.Comment_like.Remove(theCommentLike);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", new { id = thePerson.picture_id });
+        }
     }
 }
